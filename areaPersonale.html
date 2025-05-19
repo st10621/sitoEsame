@@ -3,20 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profilo Personale - Monsù Lorenzo</title>
+  <title>Area Personale - Monsù Lorenzo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/formDetail.css">
 </head>
 <body class="bg-light">
-
   <div class="container container-main mt-5 p-4 p-md-5">
-    
-    <!-- Navbar aggiornata con icone -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light mb-4">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="img/logoSemplice.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top me-2">
+          <img src="img/logoSemplice.png" alt="Logo" width="60" height="auto" class="d-inline-block align-text-top me-2" />
           Monsù Lorenzo 5BM 2024/2025
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -25,13 +23,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home">
+              <a class="nav-link" href="index.html">
                 <i class="fas fa-home me-1"></i> Home
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#biografia">
-                <i class="fas fa-user me-1"></i> Biografia
+              <a class="nav-link active" aria-current="page" href="#area-personale">
+                <i class="fas fa-user me-1"></i> Area Personale
               </a>
             </li>
             <li class="nav-item">
@@ -44,63 +42,70 @@
       </div>
     </nav>
 
-    <!-- Freccia indietro -->
+    <!-- Indietro -->
     <div class="mt-2 mb-4">
-      <a href="index.html" class="text-decoration-none">
-        <i class="fas fa-arrow-left freccia-torna-su"></i> Torna alla Home
+      <a href="index.html" class="btn btn-success mb-3">
+        <i class="fas fa-arrow-left me-1"></i> Torna alla Home
       </a>
     </div>
 
-    <!-- Sezione intro con stile aggiornato -->
+    <!-- Intro -->
     <div class="intro-section text-center mb-5">
-      <h1 class="display-4">Chi Sono</h1>
-      <p class="lead">Un breve viaggio tra passioni, studi e obiettivi personali.</p>
+      <h1 class="display-4">Area Personale</h1>
+      <p class="lead">Uno spazio dedicato alla presentazione personale, alle passioni, agli interessi e agli obiettivi futuri.</p>
     </div>
 
-    <!-- Contenuto principale -->
-    <div class="bg-white p-4 rounded shadow-sm" id="biografia">
-      <h2 class="text-primary mt-4">Biografia</h2>
-      <p>Mi chiamo Lorenzo Monsù, sono uno studente dell’indirizzo informatico con una forte passione per le discipline umanistiche e per l’approccio interdisciplinare allo studio. Mi considero una persona curiosa, riflessiva e determinata, sempre alla ricerca di nuove sfide per crescere a livello personale e professionale.</p>
+    <!-- Sezioni Area Personale -->
+    <div id="area-personale">
+      <!-- Sezione 1 -->
+      <section class="mb-5">
+        <h2 class="text-success">1. Chi sono</h2>
+        <p>
+          In questa sezione puoi raccontare chi sei, il tuo percorso scolastico e le tue principali caratteristiche personali.<br>
+          <span class="fw-bold">Esempio:</span> Sono Lorenzo Monsù, uno studente dell’indirizzo informatico con una forte passione per la tecnologia e le materie umanistiche. Mi considero una persona curiosa, determinata e sempre pronta ad affrontare nuove sfide.
+        </p>
+      </section>
 
-      <h2 class="text-primary mt-4">Interessi e Passioni</h2>
-      <ul>
-        <li>Letteratura italiana e filosofia contemporanea</li>
-        <li>Programmazione e sviluppo web</li>
-        <li>Scrittura creativa e critica letteraria</li>
-        <li>Analisi sociale e culturale</li>
-        <li>Cinema d’autore e musica classica</li>
-      </ul>
+      <!-- Sezione 2 -->
+      <section class="mb-5">
+        <h2 class="text-success">2. Interessi e Passioni</h2>
+        <ul>
+          <li>Scrivi qui le tue passioni, ad esempio: programmazione, letteratura, sport, musica, viaggi, ecc.</li>
+          <li>Puoi aggiungere hobby o attività che ti rappresentano.</li>
+        </ul>
+      </section>
 
-      <h2 class="text-primary mt-4">Obiettivi Futuri</h2>
-      <p>Il mio obiettivo principale è quello di intraprendere un percorso universitario che mi permetta di unire le competenze tecniche con quelle umanistiche, per sviluppare progetti innovativi a impatto culturale e sociale. Desidero contribuire a un mondo più consapevole, informato e sensibile attraverso le mie capacità.</p>
+      <!-- Sezione 3 -->
+      <section class="mb-5">
+        <h2 class="text-success">3. Obiettivi Futuri</h2>
+        <p>
+          Descrivi quali sono i tuoi obiettivi per il futuro, sia a livello accademico che personale.<br>
+          <span class="fw-bold">Esempio:</span> Vorrei continuare gli studi in ambito informatico e sviluppare progetti che abbiano un impatto positivo sulla società.
+        </p>
+      </section>
     </div>
   </div>
 
-  <!-- Footer riprogettato -->
-  <footer class="text-white py-5">
+  <!-- Footer -->
+  <footer class="footer text-white py-5">
     <div class="container">
       <div id="contatti" class="mt-4">
-        <h2 class="text-center mb-4">Contatti</h2>
+        <h2 class="text-center mb-4 text-white">Contatti</h2>
         <div class="text-center">
           <p class="mb-3">
             <i class="fas fa-phone-alt me-2"></i>
-            <strong>Telefono:</strong> 
-            <a href="tel:+3917143283" class="text-decoration-none">+39 3917143283</a>
+            <strong>Telefono:</strong>
+            <a href="tel:+3917143283" class="text-decoration-none text-white">+39 3917143283</a>
           </p>
-          <p class="mb-3">
+          <p>
             <i class="fas fa-envelope me-2"></i>
-            <strong>Email:</strong> 
-            <a href="mailto:lorenzo.monsu@example.com" class="text-decoration-none">lorenzomonsu@gmail.com</a>
-          </p>
-          <p class="mb-3">
-            <i class="fab fa-github me-2"></i>
-            <strong>GitHub:</strong> 
-            <a href="https://github.com/tuo-username" target="_blank" class="text-decoration-none">github.com/tuo-username</a>
+            <strong>Email:</strong>
+            <a href="mailto:lorenzo.monsu@example.com" class="text-decoration-none text-white">lorenzomonsu@gmail.com</a>
           </p>
         </div>
       </div>
       <div class="mt-5 pt-3 border-top border-light">
-        <p class="mb-0">&copy; 2025 Monsù Lorenzo. Tutti i diritti riservati.</p>
+        <p class="mb-0">&copy; 2025 Monsù Lorenzo</p>
       </div>
     </div>
   </footer>
