@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     :root {
-      --primary-color: #008080; /* Verde petrolio */
-      --secondary-color: #004d40; /* Verde scuro */
+      --primary-color: #008080;
+      --secondary-color: #004d40;
       --accent-color: #e74c3c;
       --light-bg: #f8f9fa;
       --dark-bg: #343a40;
@@ -23,21 +23,20 @@
 
     .container-main {
       background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+      border-radius: 15px !important;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      border-radius: 15px;
-      padding: 2rem;
+      padding: 2rem !important;
     }
 
     .navbar {
       background-color: var(--secondary-color) !important;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       border-radius: 10px;
       margin-bottom: 2rem;
     }
 
     .navbar-brand {
-      color: white !important;
       font-weight: 600;
+      color: white !important;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -47,42 +46,41 @@
       color: white !important;
       font-weight: 500;
     }
-    .nav-link.active, .nav-link:hover {
+
+    .nav-link:hover,
+    .nav-link.active {
       color: #b2dfdb !important;
     }
 
     .intro-section {
-      background: var(--secondary-color);
-      color: white;
-      border-radius: 10px;
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-color) 100%);
       padding: 3rem 2rem;
-      text-align: center;
+      border-radius: 10px;
+      color: white;
       margin-bottom: 3rem;
     }
-    .display-4 { font-weight: 700; }
-    .lead { opacity: 0.9; }
+
+    .display-4 {
+      font-weight: 700;
+    }
+
+    .lead {
+      font-size: 1.25rem;
+      color: #e0f2f1;
+    }
+
+    .btn-success {
+      background-color: var(--primary-green);
+      border-color: var(--primary-green);
+    }
 
     .project-card {
-      background: white;
-      padding: 1.5rem;
+      background-color: white;
+      padding: 2rem;
       border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       margin-bottom: 2rem;
       border-left: 4px solid var(--primary-green);
-      transition: transform .3s, box-shadow .3s;
-    }
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-
-    .project-section {
-      margin-bottom: 1.5rem;
-    }
-    .project-section h5 {
-      color: var(--secondary-color);
-      font-weight: 600;
-      margin-bottom: 1rem;
     }
 
     .comment-box {
@@ -94,42 +92,37 @@
 
     .pdf-section {
       background-color: #fff5f5;
-      border: 2px dashed var(--accent-color);
+      border: 2px dashed #e74c3c;
       border-radius: 8px;
       padding: 2rem;
       text-align: center;
     }
-    .pdf-viewer {
-      width: 100%;
-      height: 500px;
-      border: 1px solid #ccc;
-      margin-top: 1rem;
-    }
-
-    .btn-success {
-      background-color: var(--primary-green);
-      border-color: var(--primary-green);
-    }
-    .btn-success:hover { filter: brightness(90%); }
 
     footer {
       background-color: var(--secondary-color);
       color: white;
       padding: 2rem 0;
       border-radius: 10px;
-      margin-top: 4rem;
+      margin-top: 4rem !important;
     }
-    footer a { color: #b2dfdb !important; }
-    footer a:hover { color: white !important; text-decoration: underline; }
+
+    footer a {
+      color: #b2dfdb !important;
+    }
+
+    footer a:hover {
+      color: white !important;
+      text-decoration: underline !important;
+    }
   </style>
 </head>
-<body>
-  <div class="container container-main">
+<body class="bg-light">
+  <div class="container my-5 container-main">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-light mb-4">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="../img/logoSemplice.png" alt="Logo" width="60" class="me-2"/>
+          <img src="../img/logoSemplice.png" alt="Logo" width="60" />
           Monsù Lorenzo 5BM 2024/2025
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -137,33 +130,52 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="../index.html"><i class="fas fa-home me-1"></i>Home</a></li>
-            <li class="nav-item"><a class="nav-link active" href="#tpsit"><i class="fas fa-code me-1"></i>TPSIT</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contatti"><i class="fas fa-envelope me-1"></i>Contatti</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html"><i class="fas fa-home me-1"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#tpsit"><i class="fas fa-code me-1"></i> TPSIT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contatti"><i class="fas fa-envelope me-1"></i> Contatti</a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
     <!-- Torna alla home -->
-    <a href="../areaTecnica.html" class="btn btn-success mb-4">
-      <i class="fas fa-arrow-left me-2"></i>Torna alla home
-    </a>
-
-    <!-- Intro -->
-    <div class="intro-section">
-      <h1 class="display-4"><i class="fas fa-code me-3"></i>Progetti di TPSIT</h1>
-      <p class="lead">Tecnologie e Progettazione di Sistemi Informatici e di Telecomunicazioni</p>
+    <div class="mb-4">
+      <a href="../areaTecnica.html" class="btn btn-success mb-3">
+        <i class="fas fa-arrow-left me-2"></i>Torna alla home
+      </a>
     </div>
 
-    <!-- Sezione PDF 1: Jensen Huang -->
+    <!-- Header -->
+    <div class="intro-section text-center">
+      <h1 class="display-4 mb-3">
+        <i class="fas fa-file-pdf me-3"></i>Documenti TPSIT
+      </h1>
+      <p class="lead mb-0">Visualizza i PDF relativi ai progetti svolti</p>
+    </div>
+
+    <!-- PDF Jensen Huang -->
     <div class="project-card">
-      <h3 class="text-success mb-3"><i class="fas fa-user-tie me-2"></i>Documento su Jensen Huang</h3>
-      <div class="project-section">
+      <h3 class="text-success mb-4">
+        <i class="fas fa-user-tie me-2"></i>Documento su Jensen Huang
+      </h3>
+      <div class="project-section mb-4">
         <h5><i class="fas fa-comment-dots me-2"></i>Descrizione</h5>
         <div class="comment-box">
           <p><strong>Contenuto:</strong> Biografia e carriera del fondatore di NVIDIA</p>
           <p><strong>Obiettivo:</strong> Analisi del suo impatto nell'industria tecnologica</p>
+          <ul>
+            <li>Fondazione di NVIDIA nel 1993</li>
+            <li>Innovazioni nel campo delle GPU</li>
+            <li>Contributi all'intelligenza artificiale</li>
+            <li>Filosofia aziendale e leadership</li>
+          </ul>
+          <p>Jensen Huang è considerato uno dei pionieri dell'industria tecnologica moderna...</p>
         </div>
       </div>
       <div class="project-section">
@@ -171,22 +183,30 @@
         <div class="pdf-section">
           <i class="fas fa-file-pdf fa-3x text-danger mb-3"></i>
           <h6>Documento su Jensen Huang</h6>
-          <a href="../pdf/JensengHuang.pdf" target="jensenViewer" class="btn btn-primary">
-            Apri PDF
+          <a href="../pdf/JensengHuang.pdf" target="_blank" class="btn btn-outline-danger">
+            <i class="fas fa-file-download me-2"></i>Apri PDF
           </a>
-          <iframe name="jensenViewer" class="pdf-viewer" src="about:blank"></iframe>
         </div>
       </div>
     </div>
 
-    <!-- Sezione PDF 2: Esperienza PCTO -->
+    <!-- PDF PCTO -->
     <div class="project-card">
-      <h3 class="text-success mb-3"><i class="fas fa-briefcase me-2"></i>Esperienza PCTO</h3>
-      <div class="project-section">
+      <h3 class="text-success mb-4">
+        <i class="fas fa-briefcase me-2"></i>Esperienza PCTO
+      </h3>
+      <div class="project-section mb-4">
         <h5><i class="fas fa-comment-dots me-2"></i>Descrizione</h5>
         <div class="comment-box">
           <p><strong>Contenuto:</strong> Resoconto dell'esperienza PCTO</p>
           <p><strong>Obiettivo:</strong> Documentare le competenze acquisite</p>
+          <ul>
+            <li>Descrizione dell'azienda/ente ospitante</li>
+            <li>Attività svolte</li>
+            <li>Competenze tecniche e trasversali sviluppate</li>
+            <li>Riflessioni personali</li>
+          </ul>
+          <p>Il PCTO rappresenta un'opportunità fondamentale per avvicinare il mondo scolastico a quello del lavoro...</p>
         </div>
       </div>
       <div class="project-section">
@@ -194,25 +214,23 @@
         <div class="pdf-section">
           <i class="fas fa-file-pdf fa-3x text-danger mb-3"></i>
           <h6>Esperienza PCTO</h6>
-          <a href="../pdf/PCTOinglese.pdf" target="pctoViewer" class="btn btn-primary">
-            Apri PDF
+          <a href="../pdf/PCTOinglese.pdf" target="_blank" class="btn btn-outline-danger">
+            <i class="fas fa-file-download me-2"></i>Apri PDF
           </a>
-          <iframe name="pctoViewer" class="pdf-viewer" src="about:blank"></iframe>
         </div>
       </div>
     </div>
-
   </div>
 
   <!-- Footer -->
-  <footer class="footer text-white">
-    <div class="container">
-      <div id="contatti" class="text-center mb-4">
-        <h2>Contatti</h2>
-        <p><i class="fas fa-phone-alt me-2"></i><strong>Telefono:</strong> <a href="tel:+3917143283" class="text-white text-decoration-none">+39 3917143283</a></p>
-        <p><i class="fas fa-envelope me-2"></i><strong>Email:</strong> <a href="mailto:lorenzomonsu@gmail.com" class="text-white text-decoration-none">lorenzomonsu@gmail.com</a></p>
+  <footer class="footer text-white py-5">
+    <div class="container text-center">
+      <h2 class="text-white mb-4">Contatti</h2>
+      <p><i class="fas fa-phone-alt me-2"></i><strong>Telefono:</strong> <a href="tel:+3917143283">+39 3917143283</a></p>
+      <p><i class="fas fa-envelope me-2"></i><strong>Email:</strong> <a href="mailto:lorenzomonsu@gmail.com">lorenzomonsu@gmail.com</a></p>
+      <div class="border-top border-light mt-4 pt-3">
+        <p class="mb-0">&copy; 2025 Monsù Lorenzo</p>
       </div>
-      <div class="text-center border-top border-light pt-3">&copy; 2025 Monsù Lorenzo</div>
     </div>
   </footer>
 
