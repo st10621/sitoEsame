@@ -280,7 +280,7 @@
       
       <!-- Sezione Link al Codice -->
       <div class="project-section mb-4">
-        <h5><i class="fas fa-external-link-alt me-2"></i>Link al Codice</h5>
+        <h5><i class="fas fa-external-link-alt me-2"></i>https://onlinegdb.com/uRtzg1XJw?authuser=0</h5>
         <div class="row">
           <div class="col-md-8">
             <p class="mb-3">Accedi al codice sorgente completo del progetto per esplorare l'implementazione e la struttura del sistema.</p>
@@ -288,7 +288,7 @@
           <div class="col-md-4">
             <div class="project-links d-flex flex-column gap-2">
               <a href="#" class="btn btn-outline-success" target="_blank">
-                <i class="fab fa-github me-2"></i>Visualizza Codice
+                <i></i>Visualizza Codice
               </a>
             </div>
           </div>
@@ -299,73 +299,65 @@
       <div class="project-section mb-4">
         <h5><i class="fas fa-comment-dots me-2"></i>Descrizione del Progetto</h5>
         <div class="comment-box">
-          <p class="mb-2"><strong>Tecnologie utilizzate:</strong> PHP, MySQL, HTML5, CSS3, JavaScript</p>
-          <p class="mb-2"><strong>Obiettivo:</strong> Sviluppo di un sistema completo per la gestione di un database aziendale con interfaccia web responsive.</p>
+          <p class="mb-2"><strong>Tecnologie utilizzate:</strong> C, libreria pthread</p>
+          <p class="mb-2"><strong>Obiettivo:</strong> Utilizzare il multithreading per velocizzare il conteggio delle occorrenze di un carattere all'interno di una stringa.</p>
           <p class="mb-2"><strong>Funzionalità principali:</strong></p>
           <ul class="mb-0">
-            <li>CRUD completo (Create, Read, Update, Delete)</li>
-            <li>Sistema di autenticazione utenti</li>
-            <li>Dashboard amministrativa</li>
-            <li>Report e statistiche in tempo reale</li>
+            <li>Suddivisione della stringa in segmenti gestiti da thread separati</li>
+            <li>Passaggio di dati personalizzati a ciascun thread tramite una struttura</li>
+            <li>Utilizzo di `pthread_create` e `pthread_join` per eseguire e sincronizzare i thread</li>
+            <li>Conteggio totale ottenuto dalla somma dei risultati parziali di ogni thread</li>
           </ul>
+          <p class="mt-2">
+            Il codice mostra un esempio di programmazione parallela in C. La stringa viene divisa in quattro parti (usando la macro <code>#define MAX_THREADS 4</code>) e ogni parte viene analizzata da un thread per cercare quante volte compare un determinato carattere. Alla fine, il programma raccoglie i risultati e stampa il numero totale di occorrenze. Questo approccio dimostra come sfruttare i thread per migliorare le prestazioni nei compiti ripetitivi su grandi quantità di dati.
+          </p>
         </div>
       </div>
-
-
     </div>
 
     <!-- Progetto 2 -->
     <div class="project-card bg-white p-4 shadow rounded mb-4">
       <h3 class="text-success mb-4">
-        <i class="fas fa-network-wired me-2"></i>Progetto 2: Applicazione Client-Server
+        <i class="fas fa-network-wired me-2"></i>Progetto 2: Presentazione sandbox
       </h3>
       
-      <!-- Sezione Link al Codice -->
-      <div class="project-section mb-4">
-        <h5><i class="fas fa-external-link-alt me-2"></i>Link al Codice</h5>
-        <div class="row">
-          <div class="col-md-8">
-            <p class="mb-3">Codice completo dell'applicazione client-server con protocolli di comunicazione implementati.</p>
-          </div>
-          <div class="col-md-4">
-            <div class="project-links d-flex flex-column gap-2">
-              <a href="#" class="btn btn-outline-success" target="_blank">
-                <i class="fab fa-github me-2"></i>Visualizza Codice
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sezione Commento del Codice -->
+     <!-- Sezione Commento del Codice -->
       <div class="project-section mb-4">
         <h5><i class="fas fa-comment-dots me-2"></i>Descrizione del Progetto</h5>
         <div class="comment-box">
-          <p class="mb-2"><strong>Tecnologie utilizzate:</strong> Java, Socket Programming, Multi-threading</p>
-          <p class="mb-2"><strong>Obiettivo:</strong> Implementazione di un'architettura client-server per la gestione di comunicazioni multiple simultanee.</p>
+          <p class="mb-2"><strong>Tecnologie utilizzate:</strong> Android (Java/Kotlin), Linux Security Model, Trusted Execution Environment (TEE)</p>
+          <p class="mb-2"><strong>Obiettivo:</strong> Analisi e spiegazione delle principali tecniche di sicurezza di Android, con focus su sandboxing, gestione dei permessi, protezione da malware e crittografia dei dati.</p>
           <p class="mb-2"><strong>Caratteristiche tecniche:</strong></p>
           <ul class="mb-0">
-            <li>Gestione di connessioni multiple concurrent</li>
-            <li>Protocollo di comunicazione personalizzato</li>
-            <li>Sistema di logging e monitoraggio</li>
-            <li>Interfaccia grafica per il client</li>
+            <li>Sandbox per isolamento delle app in contenitori separati</li>
+            <li>Sistema di permessi runtime e permessi “una tantum” per risorse sensibili</li>
+            <li>Google Play Protect per scansione e blocco di app malevole</li>
+            <li>Patch di sicurezza mensili e gestione degli aggiornamenti OTA</li>
+            <li>Crittografia completa del disco (AES) e File-Based Encryption (FBE)</li>
+            <li>Secure Boot e verifica firma del firmware durante l’avvio</li>
+            <li>Tecnologie anti-exploit: ASLR, DEP, Control Flow Integrity</li>
+            <li>Trusted Execution Environment (TrustZone) per operazioni crittografiche sicure</li>
+            <li>Meccanismi di privacy: Scoped Storage e revoca automatica dei permessi per app inattive</li>
           </ul>
+          <p class="mt-2">
+            Il documento illustra come Android applichi il modello di sicurezza Linux per isolare ciascuna applicazione in una sandbox dedicata, impedendo accessi non autorizzati tra app e sistema. Viene descritto il funzionamento del sistema di permessi, dalle richieste in fase di installazione alle autorizzazioni runtime e una tantum. Google Play Protect garantisce scansioni continue e protezione da malware, mentre i patch di sicurezza mensili correggono vulnerabilità critiche. La crittografia AES a livello di disco o file-based encryption protegge i dati a riposo, mentre Secure Boot e tecnologie TEE come TrustZone assicurano l’integrità del firmware e delle operazioni sensibili. Infine, tecniche come ASLR, DEP e CFI contrastano gli exploit basati su memoria, e feature di privacy (Scoped Storage, revoca permessi app inattive) mantengono gli utenti al sicuro dai rischi di accesso improprio ai dati.
+          </p>
         </div>
       </div>
 
-      <!-- Sezione PowerPoint -->
+     <!-- Sezione PowerPoint -->
       <div class="project-section">
         <h5><i class="fas fa-presentation me-2"></i>Presentazione del Progetto</h5>
         <div class="powerpoint-section">
           <i class="fas fa-file-powerpoint fa-3x text-danger mb-3"></i>
-          <h6>Inserisci qui la tua presentazione PowerPoint</h6>
-          <p class="text-muted mb-3">Presenta l'architettura del sistema, i diagrammi di flusso e i test effettuati</p>
-          <button class="btn btn-outline-danger">
-            <i class="fas fa-upload me-2"></i>Carica Presentazione
-          </button>
+          <h6>Presentazione: Sicurezza in Android</h6>
+          <p class="text-muted mb-3">Analisi dettagliata delle tecniche di protezione del sistema operativo Android</p>
+          <a href="../pdf/Sandbox Android.pdf" class="btn btn-outline-danger" target="_blank">
+            <i class="fas fa-file-download me-2"></i>Visualizza Presentazione
+          </a>
         </div>
       </div>
-    </div>
+
 
 
   </div>
