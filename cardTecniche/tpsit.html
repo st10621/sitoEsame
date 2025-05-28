@@ -5,19 +5,599 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TPSIT - Portfolio Monsù Lorenzo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --primary-color: #008080; /* Verde petrolio */
+      --secondary-color: #004d40; /* Verde scuro */
+      --accent-color: #e74c3c;
+      --light-bg: #f8f9fa;
+      --dark-bg: #343a40;
+      --primary-green: #007f3b;
+    }
+
+    body {
+      background-color: var(--light-bg);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Contenitore principale */
+    .container-main {
+      background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+      border: none !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 15px !important;
+      overflow: hidden;
+      padding: 2rem !important;
+      position: relative;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: var(--secondary-color) !important; /* Stesso colore del titolo */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid var(--secondary-color);
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .navbar:hover {
+      background-color: var(--secondary-color) !important; /* Nessun cambiamento al passaggio */
+    }
+
+    .navbar-brand {
+      font-weight: 600;
+      color: white !important;
+      transition: color 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.2rem;
+    }
+
+    .navbar-brand:hover {
+      color: #e0f2f1 !important;
+    }
+
+    .navbar-brand img {
+      width: 60px;
+      height: auto;
+      margin-right: 10px;
+    }
+
+    .nav-link {
+      color: white !important;
+      font-weight: 500;
+      margin: 0 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #b2dfdb !important;
+      transform: translateY(-2px);
+    }
+
+    /* Intro */
+    .intro-section {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-color) 100%);
+      padding: 3rem 2rem;
+      border-radius: 10px;
+      margin-bottom: 3rem;
+      color: white;
+    }
+
+    .display-4 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: white !important;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+      margin-top: 30px;
+    }
+
+    .lead {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      color: #e0f2f1;
+    }
+
+    .card {
+      border: none;
+      border-radius: 12px !important;
+      transition: all 0.3s ease;
+      overflow: hidden;
+      height: 100%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    .btn-success {
+      background-color: var(--primary-green);
+      border-color: var(--primary-green);
+      transition: all 0.3s ease;
+    }
+
+    .btn-success:hover {
+      filter: brightness(90%);
+      transform: translateY(-2px);
+    }
+
+    .text-success {
+      color: var(--primary-green) !important;
+    }
+
+    .project-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-left: 4px solid var(--primary-green);
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-links a {
+      transition: all 0.3s ease;
+    }
+
+    .project-links a:hover {
+      transform: translateY(-2px);
+    }
+
+    .freccia-torna-su {
+      transition: transform 0.3s ease, color 0.3s ease;
+      display: inline-block;
+      font-size: 1.5rem;
+      color: var(--primary-green);
+    }
+
+    .freccia-torna-su:hover {
+      transform: scale(1.2);
+      color: var(--secondary-color) !important;
+    }
+
+    footer {
+      background-color: var(--secondary-color) !important;
+      color: white;
+      padding: 2rem 0;
+      border-radius: 10px;
+      margin-top: 4rem !important;
+    }
+
+    footer h2 {
+      color: var(--primary-color) !important;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    footer a {
+      color: #b2dfdb !important;
+      transition: all 0.3s ease;
+    }
+
+    footer a:hover {
+      color: white !important;
+      text-decoration: underline !important;
+    }
+    
+    /* Stili aggiuntivi per TPSIT */
+    .code-preview {
+      background-color: #2d2d2d;
+      color: #f8f8f2;
+      border-radius: 8px;
+      padding: 15px;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      max-height: 300px;
+      overflow-y: auto;
+      margin: 15px 0;
+    }
+    
+    .code-comment {
+      color: #d4d0ab;
+      font-style: italic;
+    }
+    
+    .presentation-container {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 15px 0;
+      border-left: 3px solid var(--primary-green);
+    }
+    
+    .diagram-container {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin: 20px 0;
+      text-align: center;
+    }
+    
+    .diagram {
+      max-width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 10px;
+      background: white;
+    }
+    
+    .project-section {
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .project-section:last-child {
+      border-bottom: none;
+    }
+    
+    .section-title {
+      position: relative;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--primary-green);
+    }
+  </style>
 </head>
 <body class="bg-light">
-  <div class="container my-5">
-    <a href="../areaTecnica.html" class="btn btn-success mb-3">&larr; Torna alla home</a>
-    <h1 class="text-success">Progetti di TPSIT</h1>
-    <p class="lead">Tecnologie e Progettazione di Sistemi Informatici e di Telecomunicazioni.</p>
-    <div class="bg-white p-4 shadow rounded">
-      <h3>Inserisci i tuoi progetti:</h3>
-      <ul>
-        <li><strong>Nome Progetto:</strong> descrizione, codice, diagrammi</li>
-        <!-- Altri progetti qui -->
-      </ul>
+  <div class="container my-5 container-main">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="../img/logoSemplice.png" alt="Logo" width="60" height="auto" class="d-inline-block align-text-top me-2" />
+          Monsù Lorenzo 5BM 2024/2025
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <i class="fas fa-home me-1"></i> Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#tpsit">
+                <i class="fas fa-laptop-code me-1"></i> TPSIT
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contatti">
+                <i class="fas fa-envelope me-1"></i> Contatti
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Torna alla home -->
+    <div class="mb-4">
+      <a href="../areaTecnica.html" class="btn btn-success mb-3">
+        <i class="fas fa-arrow-left me-2"></i>Torna alla home
+      </a>
     </div>
+
+    <!-- Header -->
+    <div class="intro-section text-center">
+      <h1 class="display-4 mb-3">
+        <i class="fas fa-laptop-code me-3"></i>Progetti di TPSIT
+      </h1>
+      <p class="lead mb-0">Tecnologie e Progettazione di Sistemi Informatici e di Telecomunicazioni</p>
+    </div>
+
+    <!-- Progetto 1 -->
+    <div class="project-card bg-white p-4 shadow rounded mb-5">
+      <div class="row">
+        <div class="col-md-8">
+          <h3 class="text-success mb-3">
+            <i class="fas fa-database me-2"></i>Progetto 1: Sistema di Gestione Biblioteca
+          </h3>
+          <p class="mb-3">
+            Applicazione Java per la gestione di una biblioteca con funzionalità CRUD per libri, utenti e prestiti. 
+            Il sistema include un'interfaccia grafica intuitiva e un database relazionale MySQL per la persistenza dei dati.
+          </p>
+          
+          <div class="project-section">
+            <h4 class="text-success section-title">Codice Sorgente</h4>
+            <div class="mb-3">
+              <a href="https://github.com/lorenzomonsu/biblioteca-tpsit" target="_blank" class="btn btn-outline-success mb-2">
+                <i class="fab fa-github me-2"></i>Visualizza su GitHub
+              </a>
+            </div>
+            <div class="code-preview">
+              <span class="code-comment">// Classe principale per la gestione dei libri</span><br>
+              <span class="text-info">public class</span> <span class="text-warning">Libro</span> {<br>
+              &nbsp;&nbsp;<span class="text-info">private</span> <span class="text-warning">String</span> titolo;<br>
+              &nbsp;&nbsp;<span class="text-info">private</span> <span class="text-warning">String</span> autore;<br>
+              &nbsp;&nbsp;<span class="text-info">private</span> <span class="text-warning">String</span> isbn;<br>
+              &nbsp;&nbsp;<span class="text-info">private</span> <span class="text-warning">boolean</span> disponibile;<br><br>
+              &nbsp;&nbsp;<span class="text-info">public</span> <span class="text-warning">Libro</span>(String titolo, String autore, String isbn) {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-info">this</span>.titolo = titolo;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-info">this</span>.autore = autore;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-info">this</span>.isbn = isbn;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-info">this</span>.disponibile = <span class="text-warning">true</span>;<br>
+              &nbsp;&nbsp;}<br>
+              <span class="code-comment">// Metodi getter e setter omessi per brevità</span><br>
+              }
+            </div>
+          </div>
+          
+          <div class="project-section">
+            <h4 class="text-success section-title">Commenti sul Codice</h4>
+            <div class="presentation-container">
+              <p><strong>Architettura MVC:</strong> Il progetto segue il pattern Model-View-Controller per separare la logica di business dall'interfaccia utente.</p>
+              <p><strong>Gestione database:</strong> Utilizzo di JDBC per le operazioni CRUD su database MySQL con transazioni per garantire l'integrità dei dati.</p>
+              <p><strong>Eccezioni personalizzate:</strong> Implementazione di eccezioni specifiche per gestire errori come "LibroNonDisponibileException" e "UtenteNonTrovatoException".</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="project-section">
+            <h4 class="text-success section-title">Presentazione</h4>
+            <div class="presentation-container">
+              <p><i class="fas fa-file-powerpoint text-danger me-2"></i>Panoramica del progetto e funzionalità</p>
+              <a href="https://docs.google.com/presentation/d/1abc123def456" target="_blank" class="btn btn-outline-success w-100 mb-2">
+                <i class="fas fa-external-link-alt me-2"></i>Apri Presentazione
+              </a>
+              <div class="text-center mt-3">
+                <img src="https://via.placeholder.com/300x200?text=Anteprima+PPT" alt="Anteprima presentazione" class="img-fluid rounded">
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-section">
+            <h4 class="text-success section-title">Diagrammi UML</h4>
+            <div class="diagram-container">
+              <p><i class="fas fa-diagram-project text-primary me-2"></i>Diagramma delle classi</p>
+              <img src="https://via.placeholder.com/300x200?text=Diagramma+UML" alt="Diagramma UML" class="diagram img-fluid">
+              <div class="mt-2">
+                <a href="#" class="btn btn-outline-primary btn-sm mt-2">
+                  <i class="fas fa-download me-1"></i>Scarica diagramma
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-section">
+            <h4 class="text-success section-title">Tecnologie Utilizzate</h4>
+            <ul class="list-group">
+              <li class="list-group-item"><i class="fab fa-java text-danger me-2"></i>Java 17</li>
+              <li class="list-group-item"><i class="fas fa-database text-info me-2"></i>MySQL</li>
+              <li class="list-group-item"><i class="fas fa-window-maximize me-2"></i>JavaFX</li>
+              <li class="list-group-item"><i class="fas fa-cube text-warning me-2"></i>JDBC</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Progetto 2 -->
+    <div class="project-card bg-white p-4 shadow rounded mb-5">
+      <div class="row">
+        <div class="col-md-8">
+          <h3 class="text-success mb-3">
+            <i class="fas fa-network-wired me-2"></i>Progetto 2: Simulatore di Rete
+          </h3>
+          <p class="mb-3">
+            Applicazione Python per simulare il funzionamento di una rete di computer, inclusi router, switch e dispositivi client.
+            Implementazione di algoritmi di routing e gestione del traffico di rete.
+          </p>
+          
+          <div class="project-section">
+            <h4 class="text-success section-title">Codice Sorgente</h4>
+            <div class="mb-3">
+              <a href="https://gitlab.com/lorenzomonsu/simulatore-rete" target="_blank" class="btn btn-outline-success mb-2">
+                <i class="fab fa-gitlab me-2"></i>Visualizza su GitLab
+              </a>
+            </div>
+            <div class="code-preview">
+              <span class="code-comment"># Classe per rappresentare un router</span><br>
+              <span class="text-info">class</span> <span class="text-warning">Router</span>:<br>
+              &nbsp;&nbsp;<span class="text-info">def</span> <span class="text-warning">__init__</span>(<span class="text-info">self</span>, name):<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-info">self</span>.name = name<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-info">self</span>.routing_table = {}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-info">self</span>.interfaces = []<br><br>
+              &nbsp;&nbsp;<span class="text-info">def</span> <span class="text-warning">add_route</span>(<span class="text-info">self</span>, destination, next_hop, interface):<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-info">self</span>.routing_table[destination] = (next_hop, interface)<br><br>
+              &nbsp;&nbsp;<span class="text-info">def</span> <span class="text-warning">forward_packet</span>(<span class="text-info">self</span>, packet):<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-info">if</span> packet.destination <span class="text-info">in</span> <span class="text-info">self</span>.routing_table:<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;next_hop, interface = <span class="text-info">self</span>.routing_table[packet.destination]<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;interface.send(packet)<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-info">else</span>:<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-info">print</span>(<span class="text-danger">f"Destination </span>{packet.destination}<span class="text-danger"> not found in routing table"</span>)
+            </div>
+          </div>
+          
+          <div class="project-section">
+            <h4 class="text-success section-title">Commenti sul Codice</h4>
+            <div class="presentation-container">
+              <p><strong>Algoritmi di routing:</strong> Implementazione di OSPF e RIP per la determinazione dei percorsi ottimali nella rete.</p>
+              <p><strong>Simulazione del traffico:</strong> Generazione di pacchetti casuali per testare le prestazioni della rete in diverse condizioni.</p>
+              <p><strong>Visualizzazione:</strong> Utilizzo di Matplotlib per generare grafici delle prestazioni in tempo reale.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="project-section">
+            <h4 class="text-success section-title">Presentazione</h4>
+            <div class="presentation-container">
+              <p><i class="fas fa-file-powerpoint text-danger me-2"></i>Architettura di rete e algoritmi</p>
+              <a href="https://docs.google.com/presentation/d/2xyz789uvw456" target="_blank" class="btn btn-outline-success w-100 mb-2">
+                <i class="fas fa-external-link-alt me-2"></i>Apri Presentazione
+              </a>
+              <div class="text-center mt-3">
+                <img src="https://via.placeholder.com/300x200?text=Anteprima+PPT" alt="Anteprima presentazione" class="img-fluid rounded">
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-section">
+            <h4 class="text-success section-title">Diagrammi UML</h4>
+            <div class="diagram-container">
+              <p><i class="fas fa-diagram-project text-primary me-2"></i>Diagramma di sequenza</p>
+              <img src="https://via.placeholder.com/300x200?text=Diagramma+UML" alt="Diagramma UML" class="diagram img-fluid">
+              <div class="mt-2">
+                <a href="#" class="btn btn-outline-primary btn-sm mt-2">
+                  <i class="fas fa-download me-1"></i>Scarica diagramma
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-section">
+            <h4 class="text-success section-title">Tecnologie Utilizzate</h4>
+            <ul class="list-group">
+              <li class="list-group-item"><i class="fab fa-python text-primary me-2"></i>Python 3.10</li>
+              <li class="list-group-item"><i class="fas fa-project-diagram text-info me-2"></i>NetworkX</li>
+              <li class="list-group-item"><i class="fas fa-chart-line text-success me-2"></i>Matplotlib</li>
+              <li class="list-group-item"><i class="fas fa-terminal me-2"></i>SimPy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Progetto 3 -->
+    <div class="project-card bg-white p-4 shadow rounded">
+      <div class="row">
+        <div class="col-md-8">
+          <h3 class="text-success mb-3">
+            <i class="fas fa-mobile-alt me-2"></i>Progetto 3: App Meteo per Android
+          </h3>
+          <p class="mb-3">
+            Applicazione mobile per Android che mostra le previsioni meteo basandosi sulla posizione dell'utente. 
+            Integrazione con API meteorologiche e gestione offline dei dati recenti.
+          </p>
+          
+          <div class="project-section">
+            <h4 class="text-success section-title">Codice Sorgente</h4>
+            <div class="mb-3">
+              <a href="https://bitbucket.org/lorenzomonsu/app-meteo" target="_blank" class="btn btn-outline-success mb-2">
+                <i class="fab fa-bitbucket me-2"></i>Visualizza su Bitbucket
+              </a>
+            </div>
+            <div class="code-preview">
+              <span class="code-comment">// Funzione per ottenere i dati meteo</span><br>
+              <span class="text-info">private fun</span> <span class="text-warning">fetchWeatherData</span>(location: Location) {<br>
+              &nbsp;&nbsp;<span class="text-info">val</span> call = weatherService.getWeather(<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;location.latitude,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;location.longitude,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-danger">"metric"</span>,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;API_KEY<br>
+              &nbsp;&nbsp;)<br><br>
+              &nbsp;&nbsp;call.enqueue(<span class="text-info">object</span> : Callback&lt;WeatherResponse&gt; {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-info">override fun</span> <span class="text-warning">onResponse</span>(<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;call: Call&lt;WeatherResponse&gt;,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response: Response&lt;WeatherResponse&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;) {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-info">if</span> (response.isSuccessful) {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-info">val</span> weatherData = response.body()<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;updateUI(weatherData)<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;saveToDatabase(weatherData)<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;})<br>
+              }
+            </div>
+          </div>
+          
+          <div class="project-section">
+            <h4 class="text-success section-title">Commenti sul Codice</h4>
+            <div class="presentation-container">
+              <p><strong>Architettura MVVM:</strong> Utilizzo del pattern Model-View-ViewModel con LiveData per un aggiornamento reattivo dell'interfaccia.</p>
+              <p><strong>Gestione offline:</strong> Implementazione di Room Database per salvare localmente le previsioni e mostrarle quando non c'è connessione.</p>
+              <p><strong>Permessi:</strong> Gestione avanzata dei permessi per l'accesso alla posizione con fallback alla ricerca manuale.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="project-section">
+            <h4 class="text-success section-title">Presentazione</h4>
+            <div class="presentation-container">
+              <p><i class="fas fa-file-powerpoint text-danger me-2"></i>Funzionalità e design dell'app</p>
+              <a href="https://docs.google.com/presentation/d/3def456ghi789" target="_blank" class="btn btn-outline-success w-100 mb-2">
+                <i class="fas fa-external-link-alt me-2"></i>Apri Presentazione
+              </a>
+              <div class="text-center mt-3">
+                <img src="https://via.placeholder.com/300x200?text=Anteprima+PPT" alt="Anteprima presentazione" class="img-fluid rounded">
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-section">
+            <h4 class="text-success section-title">Mockup UI</h4>
+            <div class="diagram-container">
+              <p><i class="fas fa-mobile-alt text-info me-2"></i>Interfaccia utente</p>
+              <img src="https://via.placeholder.com/300x500?text=Mockup+App" alt="Mockup app" class="diagram img-fluid">
+              <div class="mt-2">
+                <a href="#" class="btn btn-outline-primary btn-sm mt-2">
+                  <i class="fas fa-download me-1"></i>Scarica mockup
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-section">
+            <h4 class="text-success section-title">Tecnologie Utilizzate</h4>
+            <ul class="list-group">
+              <li class="list-group-item"><i class="fab fa-android text-success me-2"></i>Android Studio</li>
+              <li class="list-group-item"><i class="fas fa-code text-info me-2"></i>Kotlin</li>
+              <li class="list-group-item"><i class="fas fa-cloud me-2"></i>OpenWeatherMap API</li>
+              <li class="list-group-item"><i class="fas fa-database text-warning me-2"></i>Room Database</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+    <footer class="footer text-white py-5">
+      <div class="container">
+        <div id="contatti" class="mt-4">
+          <h2 class="text-center mb-4 text-white">Contatti</h2>
+          <div class="text-center">
+            <p class="mb-3">
+              <i class="fas fa-phone-alt me-2"></i>
+              <strong>Telefono:</strong>
+              <a href="tel:+3917143283" class="text-decoration-none text-white">+39 3917143283</a>
+            </p>
+            <p>
+              <i class="fas fa-envelope me-2"></i>
+              <strong>Email:</strong>
+              <a href="mailto:lorenzo.monsu@example.com" class="text-decoration-none text-white">lorenzomonsu@gmail.com</a>
+            </p>
+          </div>
+        </div>
+        <div class="mt-5 pt-3 border-top border-light">
+          <p class="mb-0">&copy; 2025 Monsù Lorenzo</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </div>
 </body>
 </html>
