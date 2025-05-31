@@ -175,57 +175,6 @@
       color: #6c757d;
     }
 
-    .site-header {
-      background: var(--navbar-green);
-      color: white;
-      padding: 15px 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .site-header i {
-      margin-right: 8px;
-    }
-
-    .site-header .badge {
-      background-color: white;
-      color: var(--navbar-green);
-    }
-
-    .site-content {
-      padding: 25px;
-      background-color: #f9f9f9;
-      height: 500px;
-      overflow-y: auto;
-    }
-
-    .site-preview {
-      background: #fff;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .site-preview h3 {
-      color: var(--navbar-green);
-      border-bottom: 2px solid #e8f5e9;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-    }
-    .site-preview h3 i {
-      margin-right: 8px;
-      color: var(--navbar-green);
-    }
-
-    .site-preview img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-
     .btn-success {
       background-color: var(--navbar-green);
       border: none;
@@ -240,32 +189,12 @@
       transform: translateY(-2px);
     }
 
-    .card.border-success {
-      border-left: 4px solid var(--navbar-green) !important;
-      border-radius: 12px !important;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-    }
-
-    .card.border-success:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .card-title.text-success {
-      color: var(--navbar-green) !important;
-    }
-
     @media (max-width: 768px) {
       .container-main {
         padding: 1.5rem !important;
       }
       .intro-section h1 {
         font-size: 2rem;
-      }
-      .site-content {
-        height: 400px;
-        padding: 15px;
       }
     }
 
@@ -319,8 +248,8 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#tpsit">
-                <i class="fas fa-code me-1"></i> Sistemi
+              <a class="nav-link active" href="#educazione-civica">
+                <i class="fas fa-balance-scale me-1"></i> Educazione Civica
               </a>
             </li>
             <li class="nav-item">
@@ -346,81 +275,63 @@
       <p class="lead">Un resoconto delle attività svolte in ambito di Educazione Civica durante il percorso scolastico.</p>
     </div>
 
-    <!-- Sezione 1: Parola chiave con descrizione -->
+    <!-- ============================= -->
+    <!-- Sezione 1 (Documento Word)     -->
+    <!-- ============================= -->
     <section class="keyword-section">
-      <h2>Parola Chiave</h2>
+      <h2>Parola Chiave: Sostenibilità</h2>
       <div class="keyword-title">
-        <i class="fas fa-seedling"></i> Sostenibilità
+        <i class="fas fa-file-word"></i> Documento Word
       </div>
-      <div class="keyword-description">
-        <p>La sostenibilità rappresenta un principio fondamentale per il futuro del nostro pianeta. Nel contesto dell'educazione civica, questo concetto abbraccia tre dimensioni essenziali: ambientale, sociale ed economica.</p>
-        <p>Durante il mio percorso scolastico, ho approfondito come le nostre scelte quotidiane influenzino l'ecosistema globale e come sia possibile adottare stili di vita responsabili che garantiscano risorse anche per le generazioni future.</p>
-        <p class="mb-0">La sostenibilità non è solo un obiettivo, ma un percorso di consapevolezza e responsabilità collettiva verso il nostro pianeta e le persone che lo abitano.</p>
+      <!-- Qui inserisci il link al tuo file Word; il pulsante aprirà il documento in una nuova scheda -->
+      <div class="text-center mt-3">
+        <!-- Sostituisci "percorso/del/tuo_documento.docx" con il percorso reale del file .docx -->
+        <a href="percorso/del/tuo_documento.docx" target="_blank" class="btn btn-success">
+          <i class="fas fa-file-word me-2"></i> Apri Documento Word
+        </a>
       </div>
+      <p class="mt-4 text-center text-muted">
+        Clicca sul pulsante per visualizzare o scaricare il documento Word relativo alla parola chiave “Sostenibilità”.
+      </p>
     </section>
 
-    <!-- Sezione 2: Sito web statico -->
+    <!-- ============================= -->
+    <!-- Sezione 2 (Sito Web)           -->
+    <!-- ============================= -->
     <section class="static-site-section">
       <h2>Progetto Sito Web: Educazione Ambientale</h2>
-      <p>Di seguito è possibile visualizzare il sito web statico realizzato lo scorso anno come progetto di educazione civica, incentrato sui temi della sostenibilità ambientale e della tutela del territorio.</p>
-      
-      <div class="site-header">
-        <div>
-          <i class="fas fa-leaf"></i>
-          <span>Progetto Sostenibilità - A.S. 2023/2024</span>
-        </div>
-        <div>
-          <span class="badge">HTML/CSS</span>
-          <span class="badge">Bootstrap</span>
-        </div>
+      <p class="px-3">
+        Descrizione breve: questo progetto consiste in un sito web statico realizzato per illustrare concetti di sostenibilità ambientale.
+      </p>
+      <div class="text-center mt-3">
+        <!-- Sostituisci "https://www.tuo-sito-di-sostenibilita.com" con l’URL reale del sito -->
+        <a href="https://www.tuo-sito-di-sostenibilita.com" target="_blank" class="btn btn-success">
+          <i class="fas fa-external-link-alt me-2"></i> Apri il Sito
+        </a>
       </div>
-      
-      <div class="site-content">
-        <div class="site-preview">
-          <h3><i class="fas fa-globe-europe"></i> Sostenibilità Ambientale: Un Percorso Condiviso</h3>
-          
-          <div class="text-center mb-4">
-            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'><rect width='800' height='400' fill='%23e8f5e9'/><text x='400' y='200' font-size='36' text-anchor='middle' fill='%23004d40' font-family='Arial'>Anteprima Sito Web Statico</text><circle cx='200' cy='150' r='50' fill='%23004d40' opacity='0.3'/><circle cx='400' cy='250' r='70' fill='%23004d40' opacity='0.3'/><circle cx='600' cy='180' r='60' fill='%23004d40' opacity='0.3'/></svg>" alt="Anteprima sito web" class="img-fluid">
-          </div>
-          
-          <h4><i class="fas fa-book-open me-2"></i> Presentazione del Progetto</h4>
-          <p>Questo sito web è stato sviluppato come progetto finale del modulo di educazione civica durante l'anno scolastico 2023/2024. L'obiettivo era creare una risorsa informativa accessibile a tutti gli studenti della scuola sui temi della sostenibilità ambientale.</p>
-          
-          <div class="row mt-4">
-            <div class="col-md-6 mb-3">
-              <div class="card h-100 border-success">
-                <div class="card-body">
-                  <h5 class="card-title text-success"><i class="fas fa-lightbulb me-2"></i> Contenuti Principali</h5>
-                  <ul>
-                    <li>Cambiamenti climatici e impatto ambientale</li>
-                    <li>Economia circolare e riduzione dei rifiuti</li>
-                    <li>Biodiversità e tutela degli ecosistemi</li>
-                    <li>Energie rinnovabili e transizione ecologica</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 mb-3">
-              <div class="card h-100 border-success">
-                <div class="card-body">
-                  <h5 class="card-title text-success"><i class="fas fa-cogs me-2"></i> Tecnologie Utilizzate</h5>
-                  <ul>
-                    <li>HTML5 e CSS3 per la struttura e lo stile</li>
-                    <li>Framework Bootstrap per il design responsive</li>
-                    <li>JavaScript per interattività di base</li>
-                    <li>Icone Font Awesome per l'interfaccia</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="text-center mt-4">
-            <a href="#" class="btn btn-success me-2"><i class="fas fa-external-link-alt me-2"></i> Vai al Sito Completo</a>
-            <a href="#" class="btn btn-outline-success"><i class="fas fa-download me-2"></i> Scarica il Progetto</a>
-          </div>
-        </div>
+      <p class="mt-4 text-center text-muted">
+        Inserisci l’URL completo del sito nel valore dell’attributo <code>href</code> del pulsante.
+      </p>
+    </section>
+
+    <!-- ============================= -->
+    <!-- Sezione 3 (Documento PDF)      -->
+    <!-- ============================= -->
+    <section class="keyword-section">
+      <h2>Documento PDF: Approfondimento</h2>
+      <div class="keyword-title">
+        <i class="fas fa-file-pdf"></i> Documento PDF
       </div>
+      <!-- Qui inserisci il link al tuo file PDF; il pulsante aprirà il PDF in una nuova scheda -->
+      <div class="text-center mt-3">
+        <!-- Sostituisci "percorso/del/tuo_documento.pdf" con il percorso reale del file .pdf -->
+        <a href="percorso/del/tuo_documento.pdf" target="_blank" class="btn btn-success">
+          <i class="fas fa-file-pdf me-2"></i> Apri Documento PDF
+        </a>
+      </div>
+      <p class="mt-4 text-center text-muted">
+        Clicca sul pulsante per visualizzare o scaricare il documento PDF di approfondimento.
+      </p>
     </section>
   </div>
 
