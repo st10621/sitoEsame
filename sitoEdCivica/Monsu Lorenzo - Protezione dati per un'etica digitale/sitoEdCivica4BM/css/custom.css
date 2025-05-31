@@ -1,0 +1,39 @@
+
+  .navbar-text {
+    color: whitesmoke;
+    font-family: Arial, sans-serif; /* Font predefinito di Bootstrap */
+    font-size: 1.7rem; /* Dimensione del testo */
+    font-weight: bold; /* Grassetto */
+    text-align:center;
+  }
+  .navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .card-text {
+    max-height: calc(1.2em * 5); /* Altezza massima di 5 righe */
+    overflow: hidden; /* Nasconde il testo in eccesso */
+    position: relative; /* Posizione relativa per la freccia */
+  }
+  .card-text::after {
+    content: '\25BC'; /* Codice HTML per la freccia verso il basso */
+    position: absolute; /* Posizionamento assoluto rispetto al testo */
+    bottom: 0; /* Posizionamento in basso */
+    right: 0; /* Posizionamento a destra */
+    background-color: white; /* Sfondo bianco per la freccia */
+    cursor: pointer; /* Cambia il cursore quando si passa sopra */
+    pointer-events: auto; /* Abilita gli eventi del puntatore */
+  }
+  .card-text.expanded::after {
+    content: ''; /* Rimuove la freccia quando il testo è espanso */
+  }
+  .navbar-home{
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  .img-dim{
+    height: 350px;
+  }

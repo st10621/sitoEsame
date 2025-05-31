@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Protezione dati per un'etica digitale</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="shortcut icon" href="img/favicon16.ico" />
+	<link rel="stylesheet" href="css/custom.css">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const cardTexts = document.querySelectorAll('.card-text');
+          
+          cardTexts.forEach(function(cardText) {
+            cardText.addEventListener('click', function() {
+              // Verifica se il testo è già espanso
+              const isExpanded = this.classList.contains('expanded');
+              // Se il testo è già espanso, ripristina l'altezza massima
+              if (isExpanded) {
+                this.style.maxHeight = 'calc(1.2em * 5)';
+              } else {
+                // Altrimenti, espandi il testo impostando l'altezza massima su "none"
+                this.style.maxHeight = 'none';
+              }
+              
+              // Aggiorna la classe per indicare se il testo è espanso o no
+              this.classList.toggle('expanded');
+            });
+          });
+        });
+      </script>
+
+    <nav class="navbar navbar-expand-lg bg-info">
+        <div class="container-fluid">
+          <a class="navbar-brand col" href="#">
+            <img src="img/logo.jpg" alt="Logo" class="navbar-logo rounded-pill" style="width: 100px;">
+          </a>
+          <p class = "text-info">SPAZIOOOOOOOOOOOOO</p> <!--Utilizzo la parola SPAZIO per centrare il titolo al centro-->
+          <div class="navbar-text navbar-title col text-center"> Protezione dati per un'etica digitale</div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end col" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active navbar-home text-white" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active navbar-home text-white" aria-current="page" href="#contatti">Contatti</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <div class="container mt-4">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <h1 class="text-center mb-4">Articoli</h1>
+            <div class="row">
+              <!-- Primo Articolo -->
+              <div class="col-md-6 mb-4">
+                <div class="card">
+                  <img src="img/IntroduzioneIA.jpg" class="card-img-top img-fluid img-dim" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Cos'è l'intelligenza artificiale?</h5>
+                    <p class="card-text">L'intelligenza artificiale è come un cervello elettronico che può imparare dai dati. Aiuta i computer a fare cose intelligenti, come riconoscere immagini o rispondere alle tue domande. Utilizza algoritmi matematici per imparare e migliorare nel tempo. L'IA è utilizzata in applicazioni come il riconoscimento vocale, la visione artificiale e i veicoli autonomi. È una tecnologia in continua evoluzione che promette di trasformare il nostro mondo.  
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Secondo Articolo -->
+              <div class="col-md-6 mb-4">
+                <div class="card">
+                  <img src="img/IaRischi.jpg" class="card-img-top img-fluid img-dim" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Rischi dell'intelligenza artificiale</h5>
+                    <p class="card-text">Il dibattito sui pericoli dell'intelligenza artificiale (IA) è sempre più acceso a causa della sua crescente diffusione in vari settori. L'IA è utilizzata per regolare processi, aumentare la produttività e fare previsioni in molti campi, il che porta ad un aumento dei rischi associati.
+                        Quando si parla di rischi dell'IA ci si riferisce a problemi reali legati alla progettazione e all'uso di questa tecnologia ed importante capire che l'IA in sé non è né buona né cattiva, ma le conseguenze del suo utilizzo dipendono da come viene usata.
+                        Alcuni dei principali rischi associati all'IA includono la possibilità di creare dati falsi così convincenti che gli utenti potrebbero confonderli con quelli autentici, il rischio di introdurre soluzioni imperfette per competere più rapidamente sul mercato, e la possibilità di compromettere la privacy e la libertà personale a causa del tracciamento online.
+                        Un esempio pratico successo da poco è la pubblicazione di una foto della cantante Rose Villain nuda, che ha scioccato il web creando una situazione scomoda per l'autrice.
+                        Altri rischi includono la dipendenza eccessiva dalle decisioni delle macchine, la manipolazione dei comportamenti attraverso i social media e la mancanza di pieno godimento dei benefici dell'IA per paura dell'ignoto.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Terzo Articolo -->
+              <div class="col-md-6 mb-4">
+                <div class="card">
+                  <img src="img/comandoRobot.jpg" class="card-img-top img-fluid img-dim" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Come sarebbe il mondo se fosse governato dall' IA e dai robot?</h5>
+                    <p class="card-text">Il web oggi è dominato dalle grandi aziende commerciali, generando profonde disuguaglianze sociali e alimentando una competizione globale per il potere economico e politico. Le crisi attuali hanno radici culturali e ideologiche, mentre la comunicazione politica e il dibattito pubblico sono in crisi, frammentati dalle fake news sui social media.
+                        Le principali multinazionali digitali come Amazon e Google hanno modelli fallimentari, con quello cinese controllato dallo stato che minaccia la democrazia politica e quello americano basato sul capitalismo deregolamentato che minaccia l'economia.
+                        Manca un modello digitale europeo, ma alcune leggi come il GDPR, cercano di limitare l'egemonia dei giganti digitali. Un manifesto propone la creazione di una Internet pubblica finanziata dallo stato per garantire democrazia e trasparenza.
+                        L'automazione e l'uso massivo dei dati influenzano la progettazione delle città e rischiano di aumentare le divisioni socio-economiche. Alcune aziende immaginano città auto-evolutive, ma questo potrebbe portare a una maggiore centralizzazione del potere e alla perdita di autonomia individuale.
+                        In questo scenario, la tecnologia sta trasformando il modo in cui le città sono gestite con i cittadini considerati clienti o utenti da sorvegliare.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Quarto Articolo -->
+              <div class="col-md-6 mb-4">
+                <div class="card">
+                  <img src="img/cyberSecurity.jpg" class="card-img-top img-fluid img-dim" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">L'intelligenza artificiale nella cybersecurity</h5>
+                    <div class = "card-text"> <p>La convergenza tra Intelligenza Artificiale (IA) e cyber security è diventata essenziale nel settore in continua evoluzione. L'adozione di strumenti e tecniche basate sull'IA nella cyber security non è più solo una strategia opzionale, ma una necessità per contrastare l'aumento della sofisticazione degli attacchi informatici.
+                        Come l'IA migliora la nostra sicurezza:
+                        <ul>
+                            <li>Rilevamento e prevenzione delle minacce: I sistemi basati sull'IA analizzano grandi quantità di dati per identificare modelli e rilevare anomalie in tempo reale. Possono rilevare minacce note e nuovi vettori di attacco, identificando proattivamente le vulnerabilità per correggerle prima che possano essere sfruttate.</li>
+                            <li>Analisi del comportamento: L'IA monitora e analizza il comportamento degli utenti e il traffico di rete per identificare attività insolite. Rileva deviazioni dal comportamento normale e invia avvisi per potenziali minacce, aiutando a rilevare infezioni malware o accessi non autorizzati. </li>
+                            <li>Risposta automatizzata e mitigazione: L'IA consente risposte automatizzate agli incidenti di cyber security, come il blocco di indirizzi IP sospetti o l'avvio di procedure di risposta agli incidenti. Riduce i tempi di risposta e minimizza l'impatto degli attacchi.</li>
+                            <li> Intelligence e analisi sulle minacce: L'IA aiuta a raccogliere e analizzare grandi volumi di dati di intelligence sulle minacce, identificando minacce emergenti e fornendo informazioni utili ai team di sicurezza.</li>
+                            <li>Machine learning contradditorio: Utilizza l'IA per difendersi dagli attacchi che mirano agli stessi modelli di machine learning, identificando e mitigando gli attacchi che cercano di manipolare i sistemi di IA.</li>
+                            <li>Autenticazione e controllo degli accessi migliorati: L'IA rafforza i meccanismi di autenticazione utilizzando biometria e riconoscimento facciale, riducendo il rischio di accesso non autorizzato.</li>
+                            <li>Automazione e orchestrazione della sicurezza: L'IA automatizza le attività di sicurezza di routine e semplifica i processi di risposta agli incidenti, migliorando l'efficienza complessiva della cyber security.</li>
+                        </ul>    
+                        </p>    
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer id="contatti" class="bg-info text-white py-4" style="position:relative; z-index:0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Contatti</h5>
+                    <p>Indirizzo: Via Roma 5 - Jesi </p>
+                    <p>Email: LorenzoMonsu@info.com</p>
+                    <p>Telefono: 3345561953</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Seguici su</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Facebook</a></li>
+                        <li><a href="#" class="text-white">Twitter</a></li>
+                        <li><a href="#" class="text-white">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
