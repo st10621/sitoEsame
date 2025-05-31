@@ -8,12 +8,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     :root {
-      --primary-color: #008080;      /* Verde petrolio */
-      --secondary-color: #004d40;    /* Verde scuro */
+      --navbar-green: #004d40;    /* Verde della navbar */
       --accent-color: #e74c3c;
       --light-bg: #f8f9fa;
       --dark-bg: #343a40;
-      --primary-green: #007f3b;      /* Colore dominante per elementi “success” */
     }
 
     body {
@@ -36,16 +34,16 @@
 
     /* Navbar */
     .navbar {
-      background-color: var(--secondary-color) !important;
+      background-color: var(--navbar-green) !important;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
       margin-bottom: 2rem;
-      border-bottom: 2px solid var(--secondary-color);
+      border-bottom: 2px solid var(--navbar-green);
       transition: background-color 0.3s ease-in-out;
     }
 
     .navbar:hover {
-      background-color: var(--secondary-color) !important;
+      background-color: var(--navbar-green) !important;
     }
 
     .navbar-brand {
@@ -83,7 +81,7 @@
 
     /* Intro */
     .intro-section {
-      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-color) 100%);
+      background: linear-gradient(135deg, var(--navbar-green) 0%, var(--navbar-green) 100%);
       padding: 3rem 2rem;
       border-radius: 10px;
       margin-bottom: 3rem;
@@ -108,8 +106,8 @@
 
     /* Bottone “Torna alla Home” */
     .btn-return {
-      background-color: var(--primary-green);
-      border-color: var(--primary-green);
+      background-color: var(--navbar-green);
+      border-color: var(--navbar-green);
       transition: all 0.3s ease;
       margin-bottom: 1.5rem;
     }
@@ -124,12 +122,12 @@
       padding: 25px;
       border-radius: 8px;
       margin-top: 20px;
-      border-left: 4px solid var(--primary-green);
+      border-left: 4px solid var(--navbar-green);
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
 
     .keyword-section h2 {
-      color: var(--primary-green) !important;
+      color: var(--navbar-green) !important;
       border-bottom: 2px solid #e9f5eb;
       padding-bottom: 10px;
       margin-bottom: 20px;
@@ -138,14 +136,14 @@
     .keyword-title {
       font-size: 2.2rem;
       font-weight: 700;
-      color: var(--secondary-color);
+      color: var(--navbar-green);
       margin-bottom: 15px;
       display: flex;
       align-items: center;
     }
 
     .keyword-title i {
-      color: var(--primary-green);
+      color: var(--navbar-green);
       margin-right: 10px;
     }
 
@@ -165,7 +163,7 @@
     }
 
     .static-site-section h2 {
-      color: var(--primary-green) !important;
+      color: var(--navbar-green) !important;
       border-bottom: 2px solid #e9f5eb;
       padding-bottom: 10px;
       margin-bottom: 20px;
@@ -178,7 +176,7 @@
     }
 
     .site-header {
-      background: var(--primary-green);
+      background: var(--navbar-green);
       color: white;
       padding: 15px 25px;
       display: flex;
@@ -192,7 +190,7 @@
 
     .site-header .badge {
       background-color: white;
-      color: var(--primary-green);
+      color: var(--navbar-green);
     }
 
     .site-content {
@@ -210,7 +208,7 @@
     }
 
     .site-preview h3 {
-      color: var(--secondary-color);
+      color: var(--navbar-green);
       border-bottom: 2px solid #e8f5e9;
       padding-bottom: 10px;
       margin-bottom: 20px;
@@ -219,7 +217,7 @@
     }
     .site-preview h3 i {
       margin-right: 8px;
-      color: var(--primary-green);
+      color: var(--navbar-green);
     }
 
     .site-preview img {
@@ -229,7 +227,7 @@
     }
 
     .btn-success {
-      background-color: var(--primary-green);
+      background-color: var(--navbar-green);
       border: none;
       padding: 10px 20px;
       border-radius: 6px;
@@ -243,7 +241,7 @@
     }
 
     .card.border-success {
-      border-left: 4px solid var(--primary-green) !important;
+      border-left: 4px solid var(--navbar-green) !important;
       border-radius: 12px !important;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease;
@@ -255,7 +253,7 @@
     }
 
     .card-title.text-success {
-      color: var(--primary-green) !important;
+      color: var(--navbar-green) !important;
     }
 
     @media (max-width: 768px) {
@@ -273,7 +271,7 @@
 
     /* Footer */
     footer {
-      background-color: var(--secondary-color) !important;
+      background-color: var(--navbar-green) !important;
       color: white;
       padding: 2rem 0;
       border-radius: 10px;
@@ -281,7 +279,7 @@
     }
 
     footer h2 {
-      color: var(--primary-color) !important;
+      color: var(--navbar-green) !important;
       font-weight: 700;
       margin-bottom: 1.5rem;
     }
@@ -307,7 +305,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23007f3b'/><text x='50%' y='50%' font-size='40' text-anchor='middle' fill='white' font-family='Arial' dy='.3em'>LM</text></svg>" alt="Logo" />
+          <img src="../img/logoSemplice.png" alt="Logo" width="60" height="auto" class="d-inline-block align-text-top me-2" />
           Monsù Lorenzo 5BM 2024/2025
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -316,17 +314,17 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="../index.html">
                 <i class="fas fa-home me-1"></i> Home
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
-                <i class="fas fa-balance-scale me-1"></i> Educazione Civica
+              <a class="nav-link active" href="#tpsit">
+                <i class="fas fa-code me-1"></i> Sistemi
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="#contatti">
                 <i class="fas fa-envelope me-1"></i> Contatti
               </a>
             </li>
@@ -382,7 +380,7 @@
           <h3><i class="fas fa-globe-europe"></i> Sostenibilità Ambientale: Un Percorso Condiviso</h3>
           
           <div class="text-center mb-4">
-            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'><rect width='800' height='400' fill='%23e8f5e9'/><text x='400' y='200' font-size='36' text-anchor='middle' fill='%23007f3b' font-family='Arial'>Anteprima Sito Web Statico</text><circle cx='200' cy='150' r='50' fill='%234caf50' opacity='0.3'/><circle cx='400' cy='250' r='70' fill='%238bc34a' opacity='0.3'/><circle cx='600' cy='180' r='60' fill='%23cddc39' opacity='0.3'/></svg>" alt="Anteprima sito web" class="img-fluid">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'><rect width='800' height='400' fill='%23e8f5e9'/><text x='400' y='200' font-size='36' text-anchor='middle' fill='%23004d40' font-family='Arial'>Anteprima Sito Web Statico</text><circle cx='200' cy='150' r='50' fill='%23004d40' opacity='0.3'/><circle cx='400' cy='250' r='70' fill='%23004d40' opacity='0.3'/><circle cx='600' cy='180' r='60' fill='%23004d40' opacity='0.3'/></svg>" alt="Anteprima sito web" class="img-fluid">
           </div>
           
           <h4><i class="fas fa-book-open me-2"></i> Presentazione del Progetto</h4>
