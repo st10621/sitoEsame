@@ -6,15 +6,238 @@
   <title>Educazione Civica - Monsù Lorenzo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/formDetail.css">
+  <style>
+    :root {
+      --primary-color: #28a745;
+      --secondary-color: #f8f9fa;
+      --text-dark: #343a40;
+      --text-light: #6c757d;
+    }
+    
+    body {
+      background-color: #f0f7f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+    
+    .container-main {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      margin-bottom: 30px;
+    }
+    
+    .navbar {
+      background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+      border-radius: 10px;
+      padding: 15px;
+    }
+    
+    .navbar-brand, .nav-link {
+      color: white !important;
+      font-weight: 500;
+    }
+    
+    .nav-link:hover {
+      color: #d4edda !important;
+    }
+    
+    .intro-section h1 {
+      color: var(--primary-color);
+      font-weight: 700;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .intro-section p {
+      color: var(--text-light);
+      font-size: 1.1rem;
+    }
+    
+    section {
+      background-color: #f8fff9;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      border-left: 4px solid var(--primary-color);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    }
+    
+    h2.text-success {
+      border-bottom: 2px solid #e9f5eb;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+    }
+    
+    .footer {
+      background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 C30,40 70,40 100,0 L100,100 L0,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+      background-size: cover;
+      background-position: bottom;
+    }
+    
+    .btn-success {
+      background-color: var(--primary-color);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-success:hover {
+      background-color: #218838;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    .keyword-section {
+      background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+      padding: 30px;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .keyword-section::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 150px;
+      height: 150px;
+      background: rgba(40, 167, 69, 0.1);
+      border-radius: 50%;
+      z-index: 0;
+    }
+    
+    .keyword-section::after {
+      content: "";
+      position: absolute;
+      bottom: -30px;
+      left: -30px;
+      width: 100px;
+      height: 100px;
+      background: rgba(40, 167, 69, 0.08);
+      border-radius: 50%;
+      z-index: 0;
+    }
+    
+    .keyword-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #1b5e20;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    
+    .keyword-description {
+      font-size: 1.1rem;
+      color: #2e7d32;
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+    
+    .static-site-section {
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid #e0e0e0;
+      background-color: white;
+    }
+    
+    .site-header {
+      background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+      color: white;
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .site-content {
+      height: 500px;
+      overflow-y: auto;
+      padding: 25px;
+      background-color: #f9f9f9;
+    }
+    
+    .site-preview {
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    
+    .site-preview h3 {
+      color: #1b5e20;
+      border-bottom: 2px solid #e8f5e9;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .site-preview img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+    
+    .site-preview .btn {
+      margin-top: 15px;
+      font-weight: 500;
+    }
+    
+    @media (max-width: 768px) {
+      .container-main {
+        padding: 20px !important;
+      }
+      
+      .intro-section h1 {
+        font-size: 2rem;
+      }
+      
+      .site-content {
+        height: 400px;
+      }
+      
+      .keyword-title {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
 </head>
 <body class="bg-light">
-  <div class="container container-main mt-5 p-4 p-md-5">
+  <div class="container container-main mt-4 mt-md-5 p-4 p-md-5">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light mb-4">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="img/logoSemplice.png" alt="Logo" width="60" height="auto" class="d-inline-block align-text-top me-2" />
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2328a745'/><text x='50%' y='50%' font-size='40' text-anchor='middle' fill='white' font-family='Arial' dy='.3em'>LM</text></svg>" alt="Logo" width="60" height="auto" class="d-inline-block align-text-top me-2" />
           Monsù Lorenzo 5BM 2024/2025
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -23,7 +246,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
+              <a class="nav-link" href="#">
                 <i class="fas fa-home me-1"></i> Home
               </a>
             </li>
@@ -44,7 +267,7 @@
 
     <!-- Indietro -->
     <div class="mt-2 mb-4">
-      <a href="index.html" class="btn btn-success mb-3">
+      <a href="#" class="btn btn-success mb-3">
         <i class="fas fa-arrow-left me-1"></i> Torna alla Home
       </a>
     </div>
@@ -74,7 +297,7 @@
         </ul>
       </section>
 
-            <!-- Sezione 3 -->
+      <!-- Sezione 3 -->
       <section class="mb-5">
         <h2 class="text-success">3. Attività Svolte negli Anni</h2>
         <p>
@@ -88,14 +311,6 @@
         <p>
           <span class="fw-bold">Incontri con Esperti</span><br>
           Partecipazione a seminari con rappresentanti delle istituzioni e associazioni per approfondire i temi della legalità e della giustizia sociale.
-        </p>
-        <p>
-          <span class="fw-bold">Visite Istituzionali</span><br>
-          Visite a enti locali e tribunali per comprendere il funzionamento delle istituzioni democratiche.
-        </p>
-        <p>
-          <span class="fw-bold">Eventi di Sensibilizzazione</span><br>
-          Organizzazione di giornate dedicate alla memoria e alla promozione dei diritti umani.
         </p>
       </section>
 
@@ -120,11 +335,91 @@
       <section class="mb-5">
         <h2 class="text-success">6. Link ai Lavori Svolti</h2>
         <ul>
-          <li><a href="documenti/costituzione-presentazione.pdf" target="_blank">Presentazione sulla Costituzione Italiana</a></li>
-          <li><a href="documenti/sostenibilita-ambiente.pdf" target="_blank">Ricerca sulla Sostenibilità Ambientale</a></li>
-          <li><a href="documenti/evento-diritti-umani.pdf" target="_blank">Evento: Giornata dei Diritti Umani</a></li>
-          <!-- Aggiungi altri link ai lavori se necessario -->
+          <li><a href="#" class="text-decoration-none text-success">Presentazione sulla Costituzione Italiana</a></li>
+          <li><a href="#" class="text-decoration-none text-success">Ricerca sulla Sostenibilità Ambientale</a></li>
+          <li><a href="#" class="text-decoration-none text-success">Evento: Giornata dei Diritti Umani</a></li>
         </ul>
+      </section>
+      
+      <!-- NUOVA SEZIONE 7: Parola chiave con descrizione -->
+      <section class="mb-5 keyword-section">
+        <h2 class="text-success">7. Parola Chiave</h2>
+        <div class="mt-4">
+          <div class="keyword-title">
+            <i class="fas fa-star me-2"></i> Sostenibilità
+          </div>
+          <div class="keyword-description">
+            La sostenibilità rappresenta un principio fondamentale per il futuro del nostro pianeta. 
+            Nel contesto dell'educazione civica, questo concetto abbraccia tre dimensioni essenziali: 
+            ambientale, sociale ed economica. Durante il mio percorso scolastico, ho approfondito 
+            come le nostre scelte quotidiane influenzino l'ecosistema globale e come sia possibile 
+            adottare stili di vita responsabili che garantiscano risorse anche per le generazioni future.
+          </div>
+        </div>
+      </section>
+      
+      <!-- NUOVA SEZIONE 8: Sito web statico -->
+      <section class="mb-5 static-site-section">
+        <h2 class="text-success">8. Progetto Sito Web: Educazione Ambientale</h2>
+        <p class="px-3 pt-2">Di seguito è incorporato il sito web statico realizzato lo scorso anno come progetto di educazione civica, incentrato sui temi della sostenibilità ambientale e della tutela del territorio.</p>
+        
+        <div class="site-header">
+          <div>
+            <i class="fas fa-leaf me-2"></i>
+            <span>Progetto Sostenibilità - A.S. 2023/2024</span>
+          </div>
+          <div>
+            <span class="badge bg-light text-success me-2">HTML/CSS</span>
+            <span class="badge bg-light text-success">Bootstrap</span>
+          </div>
+        </div>
+        
+        <div class="site-content">
+          <div class="site-preview">
+            <h3><i class="fas fa-globe-europe me-2"></i> Sostenibilità Ambientale: Un Percorso Condiviso</h3>
+            
+            <div class="text-center mb-4">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'><rect width='800' height='400' fill='%23e8f5e9'/><text x='400' y='200' font-size='36' text-anchor='middle' fill='%2328a745' font-family='Arial'>Anteprima Sito Web Statico</text><circle cx='200' cy='150' r='50' fill='%234caf50' opacity='0.3'/><circle cx='400' cy='250' r='70' fill='%238bc34a' opacity='0.3'/><circle cx='600' cy='180' r='60' fill='%23cddc39' opacity='0.3'/></svg>" alt="Anteprima sito web" class="img-fluid">
+            </div>
+            
+            <h4><i class="fas fa-book-open me-2"></i> Presentazione del Progetto</h4>
+            <p>Questo sito web è stato sviluppato come progetto finale del modulo di educazione civica durante l'anno scolastico 2023/2024. L'obiettivo era creare una risorsa informativa accessibile a tutti gli studenti della scuola sui temi della sostenibilità ambientale.</p>
+            
+            <div class="row mt-4">
+              <div class="col-md-6 mb-3">
+                <div class="card h-100 border-success">
+                  <div class="card-body">
+                    <h5 class="card-title text-success"><i class="fas fa-lightbulb me-2"></i> Contenuti Principali</h5>
+                    <ul>
+                      <li>Cambiamenti climatici e impatto ambientale</li>
+                      <li>Economia circolare e riduzione dei rifiuti</li>
+                      <li>Biodiversità e tutela degli ecosistemi</li>
+                      <li>Energie rinnovabili e transizione ecologica</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="card h-100 border-success">
+                  <div class="card-body">
+                    <h5 class="card-title text-success"><i class="fas fa-cogs me-2"></i> Tecnologie Utilizzate</h5>
+                    <ul>
+                      <li>HTML5 e CSS3 per la struttura e lo stile</li>
+                      <li>Framework Bootstrap per il design responsive</li>
+                      <li>JavaScript per interattività di base</li>
+                      <li>Icone Font Awesome per l'interfaccia</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="text-center mt-4">
+              <a href="#" class="btn btn-success me-2"><i class="fas fa-external-link-alt me-2"></i> Vai al Sito Completo</a>
+              <a href="#" class="btn btn-outline-success"><i class="fas fa-download me-2"></i> Scarica il Progetto</a>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   </div>
