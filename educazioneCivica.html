@@ -8,7 +8,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     :root {
-      --navbar-green: #004d40;    /* Verde della navbar */
+      /* Colori principali ereditati dal secondo sito */
+      --primary-color: #008080;       /* Verde petrolio (per il titolo “Contatti” nel footer) */
+      --primary-green: #007f3b;       /* Verde petrolio scuro (per i bottoni “Success”) */
+      --secondary-color: #004d40;     /* Verde scuro (usato nella navbar e altre sezioni) */
       --accent-color: #e74c3c;
       --light-bg: #f8f9fa;
       --dark-bg: #343a40;
@@ -36,16 +39,16 @@
 
     /* Navbar */
     .navbar {
-      background-color: var(--navbar-green) !important;
+      background-color: var(--secondary-color) !important;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
       margin-bottom: 2rem;
-      border-bottom: 2px solid var(--navbar-green);
+      border-bottom: 2px solid var(--secondary-color);
       transition: background-color 0.3s ease-in-out;
     }
 
     .navbar:hover {
-      background-color: var(--navbar-green) !important;
+      background-color: var(--secondary-color) !important;
     }
 
     .navbar-brand {
@@ -83,7 +86,7 @@
 
     /* Intro */
     .intro-section {
-      background: linear-gradient(135deg, var(--navbar-green) 0%, var(--navbar-green) 100%);
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-color) 100%);
       padding: 3rem 2rem;
       border-radius: 10px;
       margin-bottom: 3rem;
@@ -106,10 +109,11 @@
       color: #e0f2f1;
     }
 
-    /* Bottone “Torna alla Home” */
+    /* Bottone “Torna alla Home” (aggiornato per utilizzare --primary-green) */
     .btn-return {
-      background-color: var(--navbar-green);
-      border-color: var(--navbar-green);
+      background-color: var(--primary-green);
+      border-color: var(--primary-green);
+      color: white !important;
       transition: all 0.3s ease;
       margin-bottom: 1.5rem;
     }
@@ -125,14 +129,14 @@
       gap: 10px;
       font-size: 1.75rem;
       font-weight: 600;
-      color: var(--navbar-green) !important;
+      color: var(--secondary-color) !important;
       border-bottom: 2px solid var(--section-border);
       padding-bottom: 8px;
       margin-bottom: 20px;
     }
     .section-title i {
       font-size: 1.5rem;
-      color: var(--navbar-green);
+      color: var(--secondary-color);
     }
 
     /* Sezioni */
@@ -141,7 +145,7 @@
       padding: 25px;
       border-radius: 8px;
       margin-top: 20px;
-      border-left: 4px solid var(--navbar-green);
+      border-left: 4px solid var(--secondary-color);
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
 
@@ -155,7 +159,7 @@
     .keyword-title {
       font-size: 1.5rem;
       font-weight: 700;
-      color: var(--navbar-green);
+      color: var(--secondary-color);
       margin-bottom: 15px;
       display: flex;
       align-items: center;
@@ -165,7 +169,7 @@
     }
 
     .keyword-section .btn-success {
-      background-color: var(--navbar-green);
+      background-color: var(--secondary-color);
       border: none;
       padding: 10px 20px;
       border-radius: 6px;
@@ -194,7 +198,7 @@
     }
 
     .static-site-section .btn-success {
-      background-color: var(--navbar-green);
+      background-color: var(--secondary-color);
       border: none;
       padding: 10px 20px;
       border-radius: 6px;
@@ -223,15 +227,16 @@
 
     /* Footer */
     footer {
-      background-color: var(--navbar-green) !important;
+      background-color: var(--secondary-color) !important;
       color: white;
       padding: 2rem 0;
       border-radius: 10px;
       margin-top: 4rem !important;
     }
 
+    /* Titolo “Contatti” colorato con --primary-color (#008080) */
     footer h2 {
-      color: var(--navbar-green) !important;
+      color: var(--primary-color) !important;
       font-weight: 700;
       margin-bottom: 1.5rem;
     }
@@ -285,7 +290,7 @@
       </div>
     </nav>
 
-    <!-- Torna alla Home -->
+    <!-- Torna alla Home (aggiornato con il colore --primary-green) -->
     <div class="mb-4">
       <a href="index.html" class="btn btn-return">
         <i class="fas fa-arrow-left me-2"></i> Torna alla Home
@@ -355,17 +360,18 @@
     <footer>
       <div class="container">
         <div id="contatti" class="mt-4">
+          <!-- Titolo “Contatti” colorato con --primary-color (#008080) -->
           <h2 class="text-center mb-4">Contatti</h2>
           <div class="text-center">
             <p class="mb-3">
               <i class="fas fa-phone-alt me-2"></i>
               <strong>Telefono:</strong>
-              <a href="tel:+3917143283">+39 3917143283</a>
+              <a href="tel:+3917143283" class="text-decoration-none text-white">+39 3917143283</a>
             </p>
             <p>
               <i class="fas fa-envelope me-2"></i>
               <strong>Email:</strong>
-              <a href="mailto:lorenzomonsu@gmail.com">lorenzomonsu@gmail.com</a>
+              <a href="mailto:lorenzomonsu@gmail.com" class="text-decoration-none text-white">lorenzomonsu@gmail.com</a>
             </p>
           </div>
         </div>
