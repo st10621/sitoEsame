@@ -12,6 +12,8 @@
       --accent-color: #e74c3c;
       --light-bg: #f8f9fa;
       --dark-bg: #343a40;
+      --section-border: #e9f5eb;
+      --text-muted: #6c757d;
     }
 
     body {
@@ -116,6 +118,23 @@
       transform: translateY(-2px);
     }
 
+    /* Titoli di Sezione Uniformi */
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--navbar-green) !important;
+      border-bottom: 2px solid var(--section-border);
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+    .section-title i {
+      font-size: 1.5rem;
+      color: var(--navbar-green);
+    }
+
     /* Sezioni */
     .keyword-section {
       background-color: #e8f5e9;
@@ -126,32 +145,36 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
 
-    .keyword-section h2 {
-      color: var(--navbar-green) !important;
-      border-bottom: 2px solid #e9f5eb;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
+    .keyword-description p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto 1rem;
     }
 
     .keyword-title {
-      font-size: 2.2rem;
+      font-size: 1.5rem;
       font-weight: 700;
       color: var(--navbar-green);
       margin-bottom: 15px;
       display: flex;
       align-items: center;
     }
-
     .keyword-title i {
-      color: var(--navbar-green);
       margin-right: 10px;
     }
 
-    .keyword-description p {
-      color: #6c757d;
-      font-size: 1.1rem;
-      max-width: 800px;
-      margin: 0 auto 1rem;
+    .keyword-section .btn-success {
+      background-color: var(--navbar-green);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .keyword-section .btn-success:hover {
+      filter: brightness(90%);
+      transform: translateY(-2px);
     }
 
     /* Progetto Sito Web Statico */
@@ -160,22 +183,17 @@
       border-radius: 8px;
       overflow: hidden;
       margin-top: 25px;
-    }
-
-    .static-site-section h2 {
-      color: var(--navbar-green) !important;
-      border-bottom: 2px solid #e9f5eb;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-      font-weight: 600;
+      padding: 25px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
 
     .static-site-section p {
-      padding: 0 1rem;
-      color: #6c757d;
+      color: var(--text-muted);
+      font-size: 1.1rem;
     }
 
-    .btn-success {
+    .static-site-section .btn-success {
       background-color: var(--navbar-green);
       border: none;
       padding: 10px 20px;
@@ -183,8 +201,7 @@
       font-weight: 500;
       transition: all 0.3s ease;
     }
-
-    .btn-success:hover {
+    .static-site-section .btn-success:hover {
       filter: brightness(90%);
       transform: translateY(-2px);
     }
@@ -195,6 +212,12 @@
       }
       .intro-section h1 {
         font-size: 2rem;
+      }
+      .section-title {
+        font-size: 1.5rem;
+      }
+      .section-title i {
+        font-size: 1.25rem;
       }
     }
 
@@ -275,13 +298,26 @@
       <p class="lead">Un resoconto delle attività svolte in ambito di Educazione Civica durante il percorso scolastico.</p>
     </div>
 
-    <section class="keyword-section">
-      <h2>
-      Stai svolgendo un gioco di ruolo con dei tuoi amici, a te è capitato di simulare di essere il leader di un grande paese e devi intervenire ad una importante conferenza dell’O.N.U. durante la quale si discuterà della possibile adesione ad una guerra che si sta svolgendo ai confini del tuo continente. Sei fermamente convinto che la partecipazione a questo conflitto: 
-      ●	non sia giusta e per sostenere questa tua tesi ti soffermerai principalmente sulle seguenti argomentazioni;
-      ●	sia giusta e per sostenere questa tua tesi ti soffermerai principalmente sulle seguenti argomentazioni:
-      </h2>
-      <div class="keyword-title">
+    <!-- Prima Sezione -->
+    <section class="keyword-section" id="educazione-civica">
+      <div class="section-title">
+        <i class="fas fa-balance-scale"></i>
+        Simulazione Conferenza ONU: Argomentazioni sulla Guerra
+      </div>
+      <div class="keyword-description">
+        <p>
+          Stai svolgendo un gioco di ruolo con dei tuoi amici: hai il ruolo di leader di un grande paese 
+          e devi intervenire a un’importante conferenza dell’O.N.U., durante la quale si discuterà 
+          della possibile adesione alla guerra in corso ai confini del tuo continente.
+          <br><br>
+          Sei fermamente convinto che la partecipazione a questo conflitto:
+        </p>
+        <ul>
+          <li>Non sia giusta e, per sostenere questa tesi, ti concentrerai su argomentazioni di tipo umanitario e diplomatico;</li>
+          <li>Sia giusta e, per sostenere questa tesi, ti focalizzerai su argomentazioni strategiche e di difesa nazionale.</li>
+        </ul>
+      </div>
+      <div class="keyword-title mt-4">
         <i class="fas fa-file-word"></i> Documento Word
       </div>
       <div class="text-center mt-3">
@@ -290,14 +326,23 @@
         </a>
       </div>
       <p class="mt-4 text-center text-muted">
-        Clicca sul pulsante per visualizzare o scaricare il documento Word 
+        Clicca sul pulsante per visualizzare o scaricare il documento Word
       </p>
     </section>
 
-    <section class="static-site-section">
-      <h2>Progetto Sito Web: Protezione dati per un'etica digitale</h2>
+    <!-- Seconda Sezione -->
+    <section class="static-site-section" id="progetto-sito">
+      <div class="section-title">
+        <i class="fas fa-globe"></i>
+        Progetto Sito Web: Protezione dati per un'etica digitale
+      </div>
       <p class="px-3">
-        E' un sito informativo che esplora il tema dell’intelligenza artificiale e il suo impatto sulla società, con particolare attenzione alla sicurezza informatica e all'etica digitale. Attraverso una serie di articoli chiari e accessibili, il sito affronta argomenti come il funzionamento dell'IA, i suoi potenziali rischi, l'influenza sulla governance futura e il ruolo dell’IA nella cybersecurity. Il design è semplice e moderno, con una navigazione intuitiva e contenuti dinamici pensati per sensibilizzare i lettori sull’importanza della protezione dei dati nel mondo digitale.
+        È un sito informativo che esplora il tema dell’intelligenza artificiale e il suo impatto sulla società, 
+        con particolare attenzione alla sicurezza informatica e all’etica digitale. Attraverso una serie di 
+        articoli chiari e accessibili, il sito affronta argomenti come il funzionamento dell’IA, i suoi potenziali rischi, 
+        l’influenza sulla governance futura e il ruolo dell’IA nella cybersecurity. Il design è semplice e moderno, 
+        con una navigazione intuitiva e contenuti dinamici pensati per sensibilizzare i lettori sull’importanza 
+        della protezione dei dati nel mondo digitale.
       </p>
       <div class="text-center mt-3">
         <a href="sitoEdCivica/Monsu Lorenzo - Protezione dati per un'etica digitale/sitoEdCivica4BM/blog.html" target="_blank" class="btn btn-success">
@@ -305,30 +350,32 @@
         </a>
       </div>
     </section>
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div id="contatti" class="mt-4">
-        <h2 class="text-center mb-4">Contatti</h2>
-        <div class="text-center">
-          <p class="mb-3">
-            <i class="fas fa-phone-alt me-2"></i>
-            <strong>Telefono:</strong>
-            <a href="tel:+3917143283">+39 3917143283</a>
-          </p>
-          <p>
-            <i class="fas fa-envelope me-2"></i>
-            <strong>Email:</strong>
-            <a href="mailto:lorenzomonsu@gmail.com">lorenzomonsu@gmail.com</a>
-          </p>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div id="contatti" class="mt-4">
+          <h2 class="text-center mb-4">Contatti</h2>
+          <div class="text-center">
+            <p class="mb-3">
+              <i class="fas fa-phone-alt me-2"></i>
+              <strong>Telefono:</strong>
+              <a href="tel:+3917143283">+39 3917143283</a>
+            </p>
+            <p>
+              <i class="fas fa-envelope me-2"></i>
+              <strong>Email:</strong>
+              <a href="mailto:lorenzomonsu@gmail.com">lorenzomonsu@gmail.com</a>
+            </p>
+          </div>
+        </div>
+        <div class="mt-5 pt-3 border-top border-light">
+          <p class="mb-0 text-center">&copy; 2025 Monsù Lorenzo</p>
         </div>
       </div>
-      <div class="mt-5 pt-3 border-top border-light">
-        <p class="mb-0 text-center">&copy; 2025 Monsù Lorenzo</p>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </div>
 </body>
 </html>
