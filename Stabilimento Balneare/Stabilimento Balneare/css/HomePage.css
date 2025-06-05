@@ -1,0 +1,45 @@
+.navbar-nav .nav-link {
+    color: #fff; /* Testo bianco perchè ho lo sfondo verde */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid, .row, .col-12 {
+    margin: 0;
+    padding: 0;
+}
+
+.section-img {
+    height: 300px; /* Imposto altezza fissa per le immagini */
+    object-fit: cover; /* Assicura che l'immagine copre il contenitore mantenendo le proporzioni che gli ho dato */
+}
+
+.testo-maiusc{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.carousel {
+    width: 100%; /* Larghezza del carosello al 100% */
+    max-width: none; /* Rimuove la larghezza massima */
+}
+
+.carousel-item img {
+    max-height: 300px; /* Altezza massima delle immagini del carosello */
+    width: 100%; /* Larghezza dell'immagine al 100% */
+    object-fit: cover; /* Copre completamente l'area dell'elemento */
+}
+
+
+.main-container {
+    margin-top: 180px; /* Aumenta questo valore se necessario */
+}
+.navbar-text {
+    color: whitesmoke;
+    font-family: Arial, sans-serif; /* Font predefinito di Bootstrap */
+    font-size: 1.7rem; /* Dimensione del testo */
+    font-weight: bold; /* Grassetto */
+    text-align:center;
+  }
