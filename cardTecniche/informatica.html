@@ -3,21 +3,358 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Informatica - Portfolio Monsù Lorenzo</title>
+  <title>INFORMATICA - Portfolio Monsù Lorenzo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --primary-color: #008080;
+      --secondary-color: #004d40;
+      --accent-color: #e74c3c;
+      --light-bg: #f8f9fa;
+      --dark-bg: #343a40;
+      --primary-green: #007f3b;
+    }
+
+    body {
+      background-color: var(--light-bg);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .container-main {
+      background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+      border-radius: 15px !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 2rem !important;
+    }
+
+    .navbar {
+      background-color: var(--secondary-color) !important;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+
+    .navbar-brand {
+      font-weight: 600;
+      color: white !important;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-link {
+      color: white !important;
+      font-weight: 500;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #b2dfdb !important;
+    }
+
+    .intro-section {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-color) 100%);
+      padding: 3rem 2rem;
+      border-radius: 10px;
+      color: white;
+      margin-bottom: 3rem;
+    }
+
+    .display-4 {
+      font-weight: 700;
+    }
+
+    .lead {
+      font-size: 1.25rem;
+      color: #e0f2f1;
+    }
+
+    .btn-success {
+      background-color: var(--primary-green);
+      border-color: var(--primary-green);
+    }
+
+    .project-card {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      border-left: 4px solid var(--primary-green);
+    }
+
+    .comment-box {
+      background-color: #f8f9fa;
+      border-left: 4px solid var(--primary-green);
+      padding: 1rem;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .pdf-section {
+      background-color: #fff5f5;
+      border: 2px dashed #e74c3c;
+      border-radius: 8px;
+      padding: 2rem;
+      text-align: center;
+    }
+    
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .website-container {
+      border: 2px solid #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 1.5rem 0;
+      height: 500px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .website-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    .external-link-container {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e2f1f1 100%);
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      margin: 1.5rem 0;
+      border-left: 4px solid var(--accent-color);
+    }
+    
+    .external-link-container i {
+      font-size: 3rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background-color: var(--secondary-color);
+      color: white;
+      padding: 2rem 0;
+      border-radius: 10px;
+      margin-top: 4rem !important;
+    }
+
+    footer a {
+      color: #b2dfdb !important;
+    }
+
+    footer a:hover {
+      color: white !important;
+      text-decoration: underline !important;
+    }
+    
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e0e0e0;
+    }
+    
+    .section-title i {
+      background: var(--primary-green);
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
 </head>
 <body class="bg-light">
-  <div class="container my-5">
-    <a href="../areaTecnica.html" class="btn btn-success mb-3">&larr; Torna alla home</a>
-    <h1 class="text-success">Progetti di Informatica</h1>
-    <p class="lead">Qui puoi trovare i progetti realizzati per la materia di Informatica.</p>
-    <div class="bg-white p-4 shadow rounded">
-      <h3>Inserisci i tuoi progetti:</h3>
-      <ul>
-        <li><strong>Nome Progetto:</strong> descrizione, link al repository o file</li>
-        <!-- Altri progetti qui -->
-      </ul>
+  <div class="container my-5 container-main">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="../img/logoSemplice.png" alt="Logo" width="60" />
+          Monsù Lorenzo 5BM 2024/2025
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html"><i class="fas fa-home me-1"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#inforamtica"><i class="fas fa-calculator me-2"></i> INFORMATICA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contatti"><i class="fas fa-envelope me-1"></i> Contatti</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Torna alla home -->
+    <div class="mb-4">
+      <a href="../areaUmanistica.html" class="btn btn-success mb-3">
+        <i class="fas fa-arrow-left me-2"></i>Torna alla home
+      </a>
     </div>
+
+    <!-- Header -->
+    <div class="intro-section text-center">
+      <h1 class="display-4 mb-3">Informatica</h1>
+      <p class="lead mb-0">Materiale sui lavori di gruppo e personali svolti nel triennio</p>
+    </div>
+
+    <!-- Sezione Video 1 -->
+    <div class="project-card">
+      <h3 class="section-title">
+        <i class="fas fa-video"></i>
+        <span>Gioco dell'anno: Flappy Bird</span>
+      </h3>
+      
+      <div class="project-section mb-4">
+        <h5><i class="fas fa-comment-dots me-2"></i>Descrizione</h5>
+        <div class="comment-box">
+          <p><strong>Contenuto:</strong> Video dimostrativo del celebre gioco mobile Flappy Bird, con sequenze di gameplay che evidenziano le caratteristiche che lo hanno reso virale.</p>
+          <p><strong>Obiettivo:</strong> Mostrare le meccaniche di gioco, il design minimalista e la difficoltà che hanno contribuito a decretare Flappy Bird come “gioco dell’anno”.</p>
+          <ul>
+            <li>Presentazione dei controlli di base: tap per far volare il pennuto fra gli ostacoli</li>
+            <li>Analisi del level design: posizionamento dei tubi e ritmo del gioco</li>
+            <li>Spiegazione del sistema di punteggio e del valore “aggiuntivo” dell’estetica retrò</li>
+            <li>Sequenze di gameplay commentate per mostrare la curva di difficoltà</li>
+            <li>Impatto culturale e fattori che ne hanno determinato il successo e la diffusione virale</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="project-section">
+        <h5><i class="fas fa-play-circle me-2"></i>Visualizza il video</h5>
+        <div class="video-container">
+          <video controls>
+            <source src="../video/FlappyBird.mp4" type="video/mp4">
+            Il tuo browser non supporta il tag video.
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sezione Video 2 -->
+    <div class="project-card">
+      <h3 class="section-title">
+        <i class="fas fa-film"></i>
+        <span>Collezione Monsù Sabbatini: Abbigliamento 2025</span>
+      </h3>
+      
+      <div class="project-section mb-4">
+        <h5><i class="fas fa-comment-dots me-2"></i>Descrizione</h5>
+        <div class="comment-box">
+          <p><strong>Contenuto:</strong> Presentazione della nuova collezione di abbigliamento firmata Monsù Sabbatini, con focus sui capi di punta e sulle tendenze per la stagione primaverile/estiva 2025.</p>
+          <p><strong>Obiettivo:</strong> Mettere in evidenza design, materiali e abbinamenti consigliati, offrendo ispirazione di stile sia per un pubblico generalista sia per gli appassionati di moda.</p>
+          <ul>
+            <li>Panoramica sui tessuti utilizzati: lino leggero, cotone biologico e fibre sostenibili</li>
+            <li>Scorci delle sfilate e delle foto di lookbook in ambientazioni urbane e naturali</li>
+            <li>Dettagli sui colori di punta: tonalità pastello e accenti vivaci per creare contrasti</li>
+            <li>Consigli di styling: come combinare giacche oversize, pantaloni a gamba larga e accessori minimal</li>
+            <li>Intervista breve al designer per approfondire ispirazioni e filosofia del brand</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="project-section">
+        <h5><i class="fas fa-play-circle me-2"></i>Visualizza il video</h5>
+        <div class="video-container">
+          <video controls>
+            <source src="../video/Abbigliamento_Monsu-Sabbatini.mp4" type="video/mp4">
+            Il tuo browser non supporta il tag video.
+          </video>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Sezione Sito Web Incorporato -->
+    <div class="project-card">
+      <h3 class="section-title">
+        <i class="fas fa-globe"></i>
+        <span>Sito web di fine quarto</span>
+      </h3>
+      <div class="project-section">
+        <div class="website-container">
+          <iframe src="../Stabilimento Balneare/Stabilimento Balneare/Home page stabilimento.html"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sezione Link Esterno -->
+    <div class="project-card">
+      <h3 class="section-title">
+        <i class="fas fa-external-link-alt"></i>
+        <span>Risorsa Esterna - Enciclopedia Matematica</span>
+      </h3>
+      
+      <div class="project-section mb-4">
+        <h5><i class="fas fa-comment-dots me-2"></i>Descrizione</h5>
+        <div class="comment-box">
+          <p><strong>Contenuto:</strong> Accesso a una risorsa esterna completa di matematica avanzata</p>
+          <p><strong>Obiettivo:</strong> Fornire materiale di approfondimento per lo studio autonomo</p>
+          <ul>
+            <li>Teoria completa su tutti gli argomenti di matematica superiore</li>
+            <li>Esercizi interattivi con soluzioni guidate</li>
+            <li>Video lezioni di professori universitari</li>
+            <li>Forum di discussione con esperti</li>
+          </ul>
+          <p>Questa risorsa esterna offre un'ampia gamma di materiali per approfondire gli argomenti trattati in classe e prepararsi per gli esami.</p>
+        </div>
+      </div>
+      
+      <div class="project-section">
+        <h5><i class="fas fa-link me-2"></i>Accedi alla risorsa</h5>
+        <div class="external-link-container">
+          <i class="fas fa-external-link-alt"></i>
+          <h4>Enciclopedia Matematica Online</h4>
+          <p>Risorsa esterna per approfondimenti e materiale aggiuntivo</p>
+          <a href="https://helpdesk.sviluppo.host/login.php" target="_blank" class="btn btn-lg btn-outline-primary mt-3">
+            <i class="fas fa-external-link-alt me-2"></i>Visita il Sito
+          </a>
+        </div>
+      </div>
+    </div>
+
   </div>
+
+  <!-- Footer -->
+  <footer class="footer text-white py-5">
+    <div class="container text-center">
+      <h2 class="text-white mb-4">Contatti</h2>
+      <p><i class="fas fa-phone-alt me-2"></i><strong>Telefono:</strong> <a href="tel:+3917143283">+39 3917143283</a></p>
+      <p><i class="fas fa-envelope me-2"></i><strong>Email:</strong> <a href="mailto:lorenzomonsu@gmail.com">lorenzomonsu@gmail.com</a></p>
+      <div class="border-top border-light mt-4 pt-3">
+        <p class="mb-0">&copy; 2025 Monsù Lorenzo</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
